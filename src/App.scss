@@ -1,0 +1,32 @@
+@import "./sass/colors.scss";
+@import "./sass/variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  color: $text-main;
+  font-family: $textFont;
+
+  @media (max-width: $maxMobile) and (orientation: landscape) {
+    min-height: 500px;
+  }
+
+  .pages {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .pages-mainNav {
+      min-height: 150px;
+    }
+  }
+
+  .App-blank {
+    width: $asideBlank;
+    background-color: $mint;
+  }
+}

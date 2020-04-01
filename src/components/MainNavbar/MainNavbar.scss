@@ -1,0 +1,26 @@
+@import "../../sass/colors.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.mainNavbar {
+  display: flex;
+  @include reset-list;
+
+  .mainNavbar-listElement {
+    padding: 3px;
+    margin: 0 3px;
+    display: flex;
+    align-items: center;
+
+    &>a {
+      display: block;
+      color: $text-main;
+      text-decoration: none;
+      font-family: $linkFont;
+    }
+
+    &.mainNavbar-listElement-burger {
+      margin-right: 7px;
+    }
+  }
+}
