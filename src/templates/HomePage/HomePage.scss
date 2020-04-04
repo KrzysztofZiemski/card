@@ -5,6 +5,7 @@
 .homePage {
     flex-grow: 1;
     display: flex;
+    height: calc(100vh - 200px);
 
     .asideNav {
         //media in variables
@@ -82,15 +83,11 @@
         position: relative;
         background-color: $grey-opacity;
         flex-grow: 1;
-        margin-right: calc((var(--asideBlank) / 1.5) * -1);
+        margin-right: calc(var(--asideBlank) * -1);
         z-index: 1;
 
-        @media screen and (min-width:$maxMobile) {
-            margin-right: calc((var(--asideBlank) / 0.7) * -1);
-        }
-
-        @media screen and (min-width:$maxLargeMobile) {
-            margin-right: calc((var(--asideBlank)/1.4) * -1);
+        @media screen and (min-width:$minTablet) {
+            margin-right: calc(var(--asideBlank)/2 * -1);
         }
 
         .headers {
@@ -105,22 +102,22 @@
             }
 
             @media screen and (min-width:$maxLargeMobile) {
-                max-width: calc(45% + var(--asideNavWidth));
+                max-width: calc(45% + var(--asideNavWidth)/2);
             }
 
             @media screen and (min-width:$minSmallDesctop) {
-                left: calc(0px - var(--asideNavWidth)/2)
+                left: calc(0px - var(--asideNavWidth)/3)
             }
 
             .headers-header-h1 {
                 font-size: calc(1rem + 1vh);
 
                 @media screen and (min-width:$maxMobile) {
-                    font-size: calc(1rem + 3vw);
+                    font-size: calc(1rem + 1vw);
                 }
 
                 @media screen and (min-width:$maxLargeMobile) {
-                    font-size: calc(1rem + 3vw);
+                    font-size: calc(1rem + 2vw);
                 }
 
                 @media screen and (min-width:$minTablet) {
@@ -132,11 +129,11 @@
                 font-size: 1.2rem;
 
                 @media screen and (min-width:$maxMobile) {
-                    font-size: calc(1rem + 3vw);
+                    font-size: calc(.8rem + 1vw);
                 }
 
                 @media screen and (min-width:$maxLargeMobile) {
-                    font-size: calc(1rem + 2vw);
+                    font-size: calc(.8rem + 2vw);
                 }
 
 
@@ -163,12 +160,17 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            max-height: calc(100% - var(--homePageMainHeader) - 200px);
+            max-height: calc(100% - var(--homePageMainHeader) - 20%);
             max-width: 70%;
 
             @media screen and (min-width:$maxLargeMobile) {
-                max-height: 70%;
+                max-height: calc(100% - var(--homePageMainHeader) - 20%);
                 max-width: 55%;
+            }
+
+            @media screen and (min-width:$maxLargeMobile) {
+                max-height: 70%;
+                max-width: 50%;
             }
 
         }

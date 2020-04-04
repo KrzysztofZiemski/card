@@ -12,7 +12,8 @@
   font-family: $textFont;
 
   .pages {
-    flex-grow: 1;
+
+    width: calc(100% - var(--asideBlank));
     display: flex;
     flex-direction: column;
     min-height: 550px;
@@ -22,7 +23,7 @@
     }
 
     .pages-mainNav {
-      min-height: 150px;
+      height: 200px;
     }
   }
 

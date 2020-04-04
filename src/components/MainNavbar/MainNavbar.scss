@@ -3,9 +3,12 @@
 @import "../../sass/mixins.scss";
 
 .mainNavbar {
-  display: flex;
   @include reset-list;
-  margin-top: 10px;
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 15px;
 
   .mainNavbar-listElement {
     padding: 3px;
@@ -13,15 +16,66 @@
     display: flex;
     align-items: center;
 
-    &>a {
-      display: block;
+    &.hide {
+      display: none;
+    }
+
+    @media screen and (min-width:$minTablet) {
+      &.hide {
+        display: flex;
+      }
+    }
+
+
+    &>button {
+      @include flex-center;
+      background-color: transparent;
+      border: none;
       color: $text-main;
-      text-decoration: none;
       font-family: $linkFont;
+      cursor: pointer;
     }
 
     &.mainNavbar-listElement-burger {
-      margin-right: 7px;
+      @media screen and (min-width:$minTablet) {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.slideNavbar {
+  @include reset-list;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  min-width: var(--asideNavWidth);
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  transition: .3s;
+  background-color: white;
+  z-index: 100;
+
+  @media (min-width:$minTablet) {
+    display: none;
+  }
+
+  &.hide {
+    left: -200px;
+    transition: .3s;
+  }
+
+  .slideNavbar-listElement {
+    margin: 10px 0;
+
+    &>a {
+      display: block;
+      padding: 3px 6px;
+      color: $text-main;
+      text-decoration: none;
+      font-family: $linkFont;
     }
   }
 }

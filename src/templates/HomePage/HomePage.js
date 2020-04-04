@@ -4,7 +4,7 @@ import githubIcon from '../../assets/github-icon.svg';
 import profile from '../../assets/profile.JPG';
 import './HomePage.scss';
 
-const HomePage = () => {
+const HomePage = (props, ref) => {
 
     return (
         <div className='homePage'>
