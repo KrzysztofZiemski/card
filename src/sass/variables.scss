@@ -17,23 +17,24 @@ $textFont:'Roboto';
     //App
     --asideBlank: 70px;
     //Home page
-    --asideNavWidth: 90px;
+    --asideNavWidth: 125px;
     --asideNavLastElement: 40px;
     --homePageMainHeader: 80px;
-
+    //MainNav
+    --navHeight: 200px;
 
     @media screen and (min-width:$maxMobile) {
         //App
         --asideBlank: 180px;
         //HomePage
         --asideNavLastElement: 50px;
-        --asideNavWidth: 110px;
+        --asideNavWidth: 125px;
 
     }
 
     @media screen and (min-width:$maxLargeMobile) {
         //App
-        --asideBlank: 300px;
+        --asideBlank: 200px;
         //HomePage
         --asideNavWidth: 200px;
         --asideNavLastElement: 80px;
@@ -42,12 +43,11 @@ $textFont:'Roboto';
     @media screen and (min-width:$minTablet) {
         //App
         //HomePage
-
     }
 
     @media screen and (min-width:$minSmallDesctop) {
         //App
-        --asideBlank: 490px;
+        --asideBlank: 35%;
         //HomePage
         --asideNavWidth: 30%;
         --asideNavLastElement: 90px;

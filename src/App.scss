@@ -6,29 +6,6 @@
 }
 
 .App {
-  display: flex;
-  min-height: 100vh;
-  color: $text-main;
+  // min-height: 100vh;
   font-family: $textFont;
-
-  .pages {
-
-    width: calc(100% - var(--asideBlank));
-    display: flex;
-    flex-direction: column;
-    min-height: 550px;
-
-    @media screen and (min-width:$minSmallDesctop) {
-      min-height: 800px;
-    }
-
-    .pages-mainNav {
-      height: 200px;
-    }
-  }
-
-  .App-blank {
-    width: var(--asideBlank);
-    background-color: $mint;
-  }
 }

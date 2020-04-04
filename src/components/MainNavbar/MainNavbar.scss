@@ -4,8 +4,9 @@
 
 .mainNavbar {
   @include reset-list;
-  position: relative;
+  position: absolute;
   display: flex;
+  top: 0;
   padding-top: 20px;
   padding-left: 20px;
   font-size: 15px;
@@ -49,6 +50,7 @@
   @include reset-list;
   position: absolute;
   left: 0;
+  top: calc(var(--navHeight) - 150px);
   height: 100%;
   min-width: var(--asideNavWidth);
   display: flex;
