@@ -1,16 +1,59 @@
+//responsive points
+$maxMobile:420px;
+$maxLargeMobile:640px;
+$minTablet:860px;
+$minSmallDesctop:1024px;
+$minLargeDesctop:1280px;
+
+//Global
 $linkFont:'nunito';
 $headersFont: 'myriad-pro';
 $textFont:'Roboto';
 
-$asideBlank:120px;
-$asideNavWidht:90px;
 
-$homePageMainHeader2Height:homePageMainHeader();
-$asideNavListElementTextHeight:35px;
-$homePageMainHeader2Height:60%;
+//varaibles css(for responsive value)
 
-$maxSmallMobile:480px;
-$maxMobile:640px;
-$maxTablet:860px;
-$maxTablet:1024px;
-$maxLarge:1280px;
+:root {
+    //App
+
+    --asideBlank: 120px;
+
+    //Home page
+    --asideNavWidth: 90px;
+    --asideNavLastElement: 40px;
+    --homePageMainHeader: 80px;
+
+
+    @media screen and (min-width:$maxMobile) {
+        //App
+        --asideBlank: 40%;
+        //HomePage
+        --asideNavLastElement: 50px;
+        --asideNavWidth: 110px;
+
+    }
+
+    @media screen and (min-width:$maxLargeMobile) {
+        //App
+        --asideBlank: 260px;
+        //HomePage
+        --asideNavWidth: 200px;
+        --asideNavLastElement: 80px;
+    }
+
+    @media screen and (min-width:$minTablet) {
+        //App
+        --asideBlank: 360px;
+        //HomePage
+
+    }
+
+    @media screen and (min-width:$minSmallDesctop) {
+        //App
+        --asideBlank: 40%;
+        //HomePage
+        --asideNavWidth: 30%;
+        --asideNavLastElement: 90px;
+
+    }
+}

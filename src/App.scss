@@ -11,14 +11,15 @@
   color: $text-main;
   font-family: $textFont;
 
-  @media (max-width: $maxMobile) and (orientation: landscape) {
-    min-height: 500px;
-  }
-
   .pages {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    min-height: 550px;
+
+    @media screen and (min-width:$minSmallDesctop) {
+      min-height: 800px;
+    }
 
     .pages-mainNav {
       min-height: 150px;
@@ -26,7 +27,7 @@
   }
 
   .App-blank {
-    width: $asideBlank;
+    width: var(--asideBlank);
     background-color: $mint;
   }
 }

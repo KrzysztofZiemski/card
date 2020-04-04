@@ -7,19 +7,22 @@
     display: flex;
 
     .asideNav {
-        width: $asideNavWidht;
+        //media in variables
+        width: var(--asideNavWidth);
 
         .asideNav-list {
             display: flex;
             flex-direction: column;
             height: 100%;
-
             @include reset-list;
 
             .asideNav-list-element {
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                margin-left: 5%;
+
+                @media screen and (min-width:$minSmallDesctop) {
+                    margin-left: 15%;
+                }
 
                 a {
                     display: block;
@@ -27,15 +30,29 @@
 
                     img {
                         height: 20px;
+
+                        @media screen and (min-width:$maxMobile) {
+                            height: 25px;
+                        }
+
+                        @media screen and (min-width:$maxLargeMobile) {
+                            height: 35px;
+                        }
+
+                        @media screen and (min-width:$minSmallDesctop) {
+                            height: 45px;
+                        }
                     }
                 }
 
                 &.asideNav-list-element-text {
                     margin-top: auto;
+                    margin-left: 0%;
 
                     a {
+                        // media in variables --asideNavLast used in homePage-main too
                         width: 100%;
-                        height: $asideNavListElementTextHeight;
+                        height: var(--asideNavLastElement);
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -44,8 +61,17 @@
                         text-decoration: none;
                         color: $white;
                         background-color: $mint;
-                        font-size: .8rem;
+                        font-size: .7rem;
+                        letter-spacing: 1px;
 
+                        @media screen and (min-width:$maxLargeMobile) {
+                            font-size: 1.4rem;
+                        }
+
+                        @media screen and (min-width:$minSmallDesctop) {
+                            font-size: 1.7rem;
+                            letter-spacing: 3px;
+                        }
                     }
                 }
             }
@@ -53,27 +79,68 @@
     }
 
     .homePage-main {
-
         position: relative;
         background-color: $grey-opacity;
         flex-grow: 1;
-        margin-right: -$asideBlank/3;
+        margin-right: calc((var(--asideBlank) / 1.5) * -1);
         z-index: 1;
 
-        .homePage-main-header1 {
-            position: absolute;
-            bottom: $homePageMainHeader2Height + 6;
-            left: -$asideNavWidht/3;
-            font-size: 1rem;
-
+        @media screen and (min-width:$maxMobile) {
+            margin-right: calc((var(--asideBlank) / 0.7) * -1);
         }
 
-        .homePage-main-header2 {
-            position: absolute;
-            bottom: $homePageMainHeader2Height;
-            left: -$asideNavWidht/3;
-            font-size: .8rem;
+        @media screen and (min-width:$maxLargeMobile) {
+            margin-right: calc((var(--asideBlank)/1.4) * -1);
+        }
 
+        .headers {
+            position: absolute;
+            top: var(--homePageMainHeader);
+            left: calc(0px - var(--asideNavWidth) / 3);
+            z-index: 1;
+
+            @media screen and (min-width:$maxLargeMobile) {
+                top: 30%;
+                left: calc(0px - var(--asideNavWidth) + 20px)
+            }
+
+            @media screen and (min-width:$maxLargeMobile) {
+                max-width: calc(45% + var(--asideNavWidth));
+            }
+
+            @media screen and (min-width:$minSmallDesctop) {
+                left: calc(0px - var(--asideNavWidth)/2)
+            }
+
+            .headers-header-h1 {
+                font-size: calc(1rem + 1vh);
+
+                @media screen and (min-width:$maxMobile) {
+                    font-size: calc(1rem + 3vw);
+                }
+
+                @media screen and (min-width:$maxLargeMobile) {
+                    font-size: calc(1rem + 3vw);
+                }
+
+                @media screen and (min-width:$minTablet) {
+                    font-size: calc(1rem + 3vw);
+                }
+            }
+
+            .headers-header-h2 {
+                font-size: 1.2rem;
+
+                @media screen and (min-width:$maxMobile) {
+                    font-size: calc(1rem + 3vw);
+                }
+
+                @media screen and (min-width:$maxLargeMobile) {
+                    font-size: calc(1rem + 2vw);
+                }
+
+
+            }
         }
 
         .homePage-main-icon {
@@ -81,14 +148,14 @@
             bottom: 0;
             left: -1px;
             display: flex;
-            height: $asideNavListElementTextHeight;
-            width: $asideNavListElementTextHeight;
+            height: var(--asideNavLastElement);
+            width: var(--asideNavLastElement);
             justify-content: center;
             align-items: center;
             background-color: $lightGrey;
 
             img {
-                height: 80%;
+                height: 60%;
             }
         }
 
@@ -96,9 +163,13 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            max-height: $homePageMainHeader2Height;
+            max-height: calc(100% - var(--homePageMainHeader) - 200px);
             max-width: 70%;
 
+            @media screen and (min-width:$maxLargeMobile) {
+                max-height: 70%;
+                max-width: 55%;
+            }
 
         }
     }

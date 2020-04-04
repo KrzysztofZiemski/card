@@ -16,8 +16,10 @@ const HomePage = () => {
                 </ul>
             </nav>
             <main className='homePage-main'>
-                <h1 className='homePage-main-header1'>Krzysztof Ziemski</h1>
-                <h2 className='homePage-main-header2'>Junior Front-end Developer</h2>
+                <div className='headers'>
+                    <h1 className='headers-header-h1'>Krzysztof Ziemski</h1>
+                    <h2 className='headers-header-h2'>Junior Front-end Developer</h2>
+                </div>
                 <a href="http://github.com/KrzysztofZiemski" className='homePage-main-icon'><img src={githubIcon} alt='Github icon' /></a>
                 <img src={profile} alt="photos Krzysztof Ziemski" className='homePage-main-profileImage' />
             </main>

@@ -5,6 +5,7 @@
 .mainNavbar {
   display: flex;
   @include reset-list;
+  margin-top: 10px;
 
   .mainNavbar-listElement {
     padding: 3px;
