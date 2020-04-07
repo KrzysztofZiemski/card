@@ -2,6 +2,10 @@ import React, { useRef } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainNavbar from './components/MainNavbar/MainNavbar';
 import HomePage from './templates/HomePage/HomePage';
+import AboutPage from './templates/AboutPage/AboutPage';
+import StackPage from './templates/StackPage/StackPage';
+import ProjectsPage from './templates/ProjectsPage/ProjectsPage';
+
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import './App.scss';
@@ -9,12 +13,8 @@ import './App.scss';
 
 function App() {
 
-  const scrollBack = (ref, back) => {
-
-  }
-
   const scrollToRef = (ref) => {
-    for (let i = 1; i <= ref.current.offsetTop + 500; i++) {
+    for (let i = 1; i <= ref.current.offsetTop; i++) {
       setTimeout(() => {
         window.scrollTo(0, i)
       }, (i + 5) * .2);
@@ -38,156 +38,15 @@ function App() {
               <HomePage />
             </section>
             <section ref={aboutPageRef}>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-
-              <var> <p>sekcja 2</p></var>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-
-              <var> <p>sekcja 2</p></var>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
-              <p>sekcja 2</p>
-              <p>sekcja 2</p>
-
+              <AboutPage />
             </section>
             <ScrollAnimation animateIn="fadeIn">
               <section ref={stackPageRef}>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
-
-                <p>sekcja 3</p>
-                <p>sekcja 3</p>
+                <StackPage />
               </section>
             </ScrollAnimation>
             <section ref={projectPageRef}>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
-              <p>sekcja 4</p>
+              <ProjectsPage />
             </section>
 
           </Route>

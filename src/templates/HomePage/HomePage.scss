@@ -39,7 +39,7 @@
                     display: flex;
                     margin-left: 5%;
 
-                    @media screen and (min-width:$minSmallDesctop) {
+                    @include rwd(desctop) {
                         margin-left: 15%;
                     }
 
@@ -50,15 +50,15 @@
                         img {
                             height: 20px;
 
-                            @media screen and (min-width:$maxMobile) {
+                            @include rwd(small) {
                                 height: 25px;
                             }
 
-                            @media screen and (min-width:$maxLargeMobile) {
+                            @include rwd(medium) {
                                 height: 35px;
                             }
 
-                            @media screen and (min-width:$minSmallDesctop) {
+                            @include rwd(desctop) {
                                 height: 45px;
                             }
                         }
@@ -70,12 +70,12 @@
 
                         a {
                             // media in variables --asideNavLast used in homePage-main too
+                            margin: 0;
                             width: 100%;
                             height: var(--asideNavLastElement);
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            margin: 0;
                             white-space: nowrap;
                             text-decoration: none;
                             color: $white;
@@ -83,11 +83,11 @@
                             font-size: .7rem;
                             letter-spacing: 1px;
 
-                            @media screen and (min-width:$maxLargeMobile) {
+                            @include rwd(medium) {
                                 font-size: 1.4rem;
                             }
 
-                            @media screen and (min-width:$minSmallDesctop) {
+                            @include rwd(desctop) {
                                 font-size: 1.7rem;
                                 letter-spacing: 3px;
                             }
@@ -99,62 +99,104 @@
 
         .homePage-main {
             position: relative;
+            display: flex;
+            flex-direction: column;
             background-color: $grey-opacity;
             flex-grow: 1;
-
+            padding: 0;
             margin-right: calc(var(--asideBlank) * -1);
             z-index: 1;
 
-            @media screen and (min-width:$minTablet) {
-                margin-right: calc(var(--asideBlank)/2 * -1);
+            @include rwd(medium) {
+                flex-direction: row;
+                margin-right: calc(var(--asideBlank) * -1 + 40px);
+            }
+
+            .homePage-main__photoContainer {
+                position: relative;
+                flex-grow: 1;
+                overflow: hidden;
+                margin: 13px;
+
+                @include rwd(tablet) {
+                    margin: 20px;
+                }
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    max-height: 100%;
+                    max-width: calc(100% - var(--asideNavLastElement));
+
+                    @include rwd(medium) {
+                        max-width: 100%;
+                        max-height: 90%;
+                    }
+                }
             }
 
             .headers {
-                position: absolute;
-                top: var(--homePageMainHeader);
-                left: calc(0px - var(--asideNavWidth) / 3);
-                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: -30px;
 
-                @media screen and (min-width:$maxLargeMobile) {
-                    top: 30%;
-                }
-
-                @media screen and (min-width:$maxLargeMobile) {
-                    max-width: calc(45% + var(--asideNavWidth)/2);
-                }
-
-                @media screen and (min-width:$minSmallDesctop) {
-                    left: calc(0px - var(--asideNavWidth)/3)
+                @include rwd(medium) {
+                    margin-left: -100px;
                 }
 
                 .headers-header-h1 {
-                    font-size: calc(.8rem + 1vh);
+                    font-size: calc1.3rem;
+                    font-weight: bold;
+                    font-family: $headersFont;
+                    margin: 3vh 0;
 
-                    @media screen and (min-width:$maxMobile) {
-                        font-size: calc(1rem + 1vw);
+                    @include rwd(small) {
+                        font-size: 1.5rem;
                     }
 
-                    @media screen and (min-width:$maxLargeMobile) {
-                        font-size: calc(1rem + 2vw);
+                    @include rwd(medium) {
+                        font-size: 1.7rem;
                     }
 
-                    @media screen and (min-width:$minTablet) {
-                        font-size: calc(1rem + 3vw);
+                    @include rwd(tablet) {
+                        font-size: 2.1rem;
+                    }
+
+                    @include rwd(desctop) {
+                        font-size: 2.5rem;
+                    }
+
+                    @include rwd(large) {
+                        font-size: 3rem;
                     }
                 }
 
                 .headers-header-h2 {
-                    font-size: calc(.8rem + 1vh);
+                    font-size: 1rem;
+                    font-weight: bold;
+                    font-family: $headersFont;
 
-                    @media screen and (min-width:$maxMobile) {
-                        font-size: calc(.8rem + 1vw);
+                    @include rwd(small) {
+                        font-size: 1.3rem;
                     }
 
-                    @media screen and (min-width:$maxLargeMobile) {
-                        font-size: calc(.8rem + 2vw);
+                    @include rwd(medium) {
+                        font-size: 1.5rem;
                     }
 
+                    @include rwd(tablet) {
+                        font-size: 1.9rem;
+                    }
 
+                    @include rwd(desctop) {
+                        font-size: 2.3rem;
+                    }
+
+                    @include rwd(large) {
+                        font-size: 2.7rem;
+                    }
                 }
             }
 
@@ -172,25 +214,6 @@
                 img {
                     height: 60%;
                 }
-            }
-
-            .homePage-main-profileImage {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                max-height: calc(100% - var(--homePageMainHeader) - 80px);
-                max-width: 70%;
-
-                @media screen and (min-width:$maxLargeMobile) {
-                    max-height: calc(100% - var(--homePageMainHeader) - 20%);
-                    max-width: 55%;
-                }
-
-                @media screen and (min-width:$maxLargeMobile) {
-                    max-height: 70%;
-                    max-width: 50%;
-                }
-
             }
         }
     }

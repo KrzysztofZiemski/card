@@ -21,24 +21,22 @@
       display: none;
     }
 
-    @media screen and (min-width:$minTablet) {
+    @include rwd(tablet) {
       &.hide {
         display: flex;
       }
     }
 
 
-    &>button {
-      @include flex-center;
-      background-color: transparent;
-      border: none;
+    &>a {
       color: $text-main;
       font-family: $linkFont;
+      text-decoration: none;
       cursor: pointer;
     }
 
     &.mainNavbar-listElement-burger {
-      @media screen and (min-width:$minTablet) {
+      @include rwd(tablet) {
         display: none;
       }
     }
@@ -60,7 +58,7 @@
   background-color: white;
   z-index: 100;
 
-  @media (min-width:$minTablet) {
+  @include rwd(tablet) {
     display: none;
   }
 

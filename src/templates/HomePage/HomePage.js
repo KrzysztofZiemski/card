@@ -22,7 +22,7 @@ const HomePage = (props, ref) => {
                         <h2 className='headers-header-h2'>Junior Front-end Developer</h2>
                     </div>
                     <a href="http://github.com/KrzysztofZiemski" className='homePage-main-icon'><img src={githubIcon} alt='Github icon' /></a>
-                    <img src={profile} alt="photos Krzysztof Ziemski" className='homePage-main-profileImage' />
+                    <div className='homePage-main__photoContainer'><img src={profile} alt="photos Krzysztof Ziemski" className='homePage-main-profileImage' /></div>
                 </main>
             </div>
             <div className='homePage-aside'><div></div><div></div></div>

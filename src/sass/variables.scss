@@ -1,15 +1,18 @@
+@import './mixins.scss';
+
 //responsive points
-$maxMobile:420px;
-$maxLargeMobile:640px;
-$minTablet:860px;
-$minSmallDesctop:1024px;
-$minLargeDesctop:1280px;
+
+$responsivePoints:(small:420px,
+    medium:640px,
+    tablet:860px,
+    desctop:1024px,
+    large:1200px);
 
 //Global
 $linkFont:'nunito';
-$headersFont: 'myriad-pro';
-$textFont:'Roboto';
-
+$headersFont: 'Prompt';
+$textFont:'Roboto',
+sans-serif;
 
 //varaibles css(for responsive value)
 
@@ -19,11 +22,10 @@ $textFont:'Roboto';
     //Home page
     --asideNavWidth: 125px;
     --asideNavLastElement: 40px;
-    --homePageMainHeader: 80px;
     //MainNav
     --navHeight: 200px;
 
-    @media screen and (min-width:$maxMobile) {
+    @include rwd(small) {
         //App
         --asideBlank: 180px;
         //HomePage
@@ -32,20 +34,20 @@ $textFont:'Roboto';
 
     }
 
-    @media screen and (min-width:$maxLargeMobile) {
+    @include rwd(medium) {
         //App
         --asideBlank: 200px;
         //HomePage
         --asideNavWidth: 200px;
+    }
+
+    @include rwd(tablet) {
+        //App
+        //HomePage
         --asideNavLastElement: 80px;
     }
 
-    @media screen and (min-width:$minTablet) {
-        //App
-        //HomePage
-    }
-
-    @media screen and (min-width:$minSmallDesctop) {
+    @include rwd(desctop) {
         //App
         --asideBlank: 35%;
         //HomePage

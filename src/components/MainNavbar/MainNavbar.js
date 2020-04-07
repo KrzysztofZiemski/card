@@ -15,16 +15,16 @@ const MainNavbar = ({ scrollToRef, pagesRef }) => {
                 <li className='mainNavbar-listElement mainNavbar-listElement-burger'>
                     <Button onClick={() => setHideMenu(!hideMenu)}><img src={burgerIcon} alt="menu-icon" /></Button>
                 </li>
-                <li className='mainNavbar-listElement hide'><button onClick={() => scrollToRef(homePageRef)}>Home</button></li>
-                <li className='mainNavbar-listElement hide'><button onClick={() => scrollToRef(aboutPageRef)}>O mnie</button></li>
-                <li className='mainNavbar-listElement'><button onClick={() => scrollToRef(stackPageRef)}>Technologie</button></li>
-                <li className='mainNavbar-listElement'><button onClick={() => scrollToRef(projectPageRef)}>Projekty</button></li>
+                <li className='mainNavbar-listElement hide'><Link to='/' onClick={() => scrollToRef(homePageRef)}>Home</Link></li>
+                <li className='mainNavbar-listElement hide'><Link to='/about' onClick={() => scrollToRef(aboutPageRef)}>O mnie</Link></li>
+                <li className='mainNavbar-listElement'><Link to='/stack' onClick={() => scrollToRef(stackPageRef)}>Technologie</Link></li>
+                <li className='mainNavbar-listElement'><Link to='/projects' onClick={() => scrollToRef(projectPageRef)}>Projekty</Link></li>
             </ul>
             <ul className={hideMenu ? 'slideNavbar hide' : 'slideNavbar'}>
-                <li className='slideNavbar-listElement'><Link to='/'>Home</Link></li>
-                <li className='slideNavbar-listElement'><Link to='/about'>O mnie</Link></li>
-                <li className='slideNavbar-listElement'><Link to='/stack'>Technologie</Link></li>
-                <li className='slideNavbar-listElement'><Link to='/projects'>Projekty</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/' onClick={() => { scrollToRef(homePageRef); setHideMenu(!hideMenu) }}>Home</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/about' onClick={() => { scrollToRef(aboutPageRef); setHideMenu(!hideMenu) }}>O mnie</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/stack' onClick={() => { scrollToRef(stackPageRef); setHideMenu(!hideMenu) }}>Technologie</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/projects' onClick={() => { scrollToRef(projectPageRef); setHideMenu(!hideMenu) }}>Projekty</Link></li>
             </ul>
         </nav >
     )
