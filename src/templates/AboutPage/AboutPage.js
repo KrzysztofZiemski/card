@@ -1,5 +1,8 @@
 import React from 'react';
 import ShowMore from '../../components/ShowMore/ShowMore';
+import { Link } from 'react-router-dom';
+import CV from '../../assets/CV.pdf';
+
 import './AboutPage.scss';
 
 const AboutPage = () => {
@@ -19,16 +22,45 @@ const AboutPage = () => {
                                                             <h2 className='job__header'>Credit Agricole</h2>
                                                             <p className='job__data'>08-2019 - aktualnie</p>
                                                             <p className='job__position'>Doradca Klienta</p>
-                                                            <ShowMore limit={15}>
-                                                                        <p>jeden jeden jeden</p>
-                                                                        <p>dwa dwa dwa</p>
-                                                                        <p>trzy trzy trzy</p>
-                                                                        <p>cztery cztery cztery cztery</p>
-                                                            </ShowMore>
+                                                            <div className='job__description'>
+                                                                        <ShowMore limit={20}>
+                                                                                    Byłem odpowiedzialny głównie za obługę bieżącą klientów banku. Zajmowałem się kredytami gotówkowymi, kartami oraz rachunkami. W razie konieczności pomagałem w sprawach technicznych związanych z bankowością internetową.
+                                                                        </ShowMore>
+                                                            </div>
+                                                </article>
+                                                <article className='job'>
+                                                            <h2 className='job__header'>Credit Agricole</h2>
+                                                            <p className='job__data'>08-2019 - aktualnie</p>
+                                                            <p className='job__position'>Doradca Klienta</p>
+                                                            <div className='job__description'>
+                                                                        <ShowMore limit={90}>
+                                                                                    Byłem odpowiedzialny głównie za obługę bieżącą klientów banku. Zajmowałem się kredytami gotówkowymi, kartami oraz rachunkami. W razie konieczności pomagałem w sprawach technicznych związanych z bankowością internetową.
+                                                                        </ShowMore>
+                                                            </div>
+                                                </article>
+                                                <article className='job'>
+                                                            <h2 className='job__header'>Credit Agricole</h2>
+                                                            <p className='job__data'>08-2019 - aktualnie</p>
+                                                            <p className='job__position'>Doradca Klienta</p>
+                                                            <div className='job__description'>
+                                                                        <ShowMore limit={90}>
+                                                                                    Byłem odpowiedzialny głównie za obługę bieżącą klientów banku. Zajmowałem się kredytami gotówkowymi, kartami oraz rachunkami. W razie konieczności pomagałem w sprawach technicznych związanych z bankowością internetową.
+                                                                        </ShowMore>
+                                                            </div>
+                                                </article>
+                                                <article className='job'>
+                                                            <h2 className='job__header'>Credit Agricole</h2>
+                                                            <p className='job__data'>08-2019 - aktualnie</p>
+                                                            <p className='job__position'>Doradca Klienta</p>
+                                                            <div className='job__description'>
+                                                                        <ShowMore limit={90}>
+                                                                                    Byłem odpowiedzialny głównie za obługę bieżącą klientów banku. Zajmowałem się kredytami gotówkowymi, kartami oraz rachunkami. W razie konieczności pomagałem w sprawach technicznych związanych z bankowością internetową.
+                                                                        </ShowMore>
+                                                            </div>
                                                 </article>
 
                                     </section>
-                                    <div><button>Pobierz CV</button></div>
+                                    <Link className='aboutPage__cv' to={CV} target="_blank" download>Pobierz CV</Link>
                         </div >
             )
 }

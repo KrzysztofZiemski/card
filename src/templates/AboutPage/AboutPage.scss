@@ -1,20 +1,70 @@
+@import './../../sass/colors.scss';
+
 .aboutPage {
             min-height: 100vh;
             margin: 30px 5px 0 12px;
             display: flex;
             flex-direction: column;
             text-align: left;
+            font-size: 1rem;
 
             .aboutMe {
+                        line-height: 1.6;
+
                         .aboutMe__header {
                                     margin: 0 0 30px 0;
+                                    font-size: 1.4rem;
                         }
 
                         .aboutMe__paragraph {
-                                    line-height: 1.5;
                                     margin-bottom: 10px;
                         }
             }
 
-            .experience {}
+            .experience {
+
+                        .experience__header {
+                                    font-size: 1.2rem;
+                                    text-align: center;
+                                    margin: 20px 0;
+
+                        }
+
+                        .job {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    margin: 20px 0;
+                                    justify-content: space-evenly;
+
+                                    .job__header {
+                                                width: 40%;
+                                                font-size: 1.1rem;
+                                                margin-bottom: 20px;
+                                    }
+
+                                    .job__data {
+                                                width: 40%;
+                                    }
+
+                                    .job__position {
+                                                width: 100%;
+                                                margin: 10px 0;
+                                    }
+                        }
+            }
+
+            .aboutPage__cv {
+                        border: 3px solid transparent;
+                        padding: 10px 15px;
+                        background-color: $mint;
+                        transition: .3s;
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: black;
+                        text-align: center;
+
+                        &:hover {
+                                    border: 3px solid black;
+                        }
+            }
 }

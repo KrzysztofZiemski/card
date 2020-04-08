@@ -10,6 +10,8 @@
     list-style: none;
 }
 
+@mixin button {}
+
 @mixin rwd($rwdPoint) {
     @if map-has-key($map:$responsivePoints, $key:$rwdPoint) {
         @media (min-width:#{map-get($responsivePoints, $rwdPoint)}) {

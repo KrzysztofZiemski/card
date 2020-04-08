@@ -1,0 +1,25 @@
+.show-more-less {
+
+            .show-more-less__span {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .5s;
+
+                        &.show-more-less__span--hide {
+                                    display: block;
+                                    width: 0;
+                                    height: 0;
+                                    opacity: 0;
+                                    overflow: hidden;
+                        }
+            }
+
+            .show-more-less__btn {
+                        background-color: transparent;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 11px;
+                        color: blue;
+                        margin-left: 5px;
+            }
+}

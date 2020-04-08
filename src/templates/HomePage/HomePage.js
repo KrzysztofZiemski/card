@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import profile from '../../assets/profile.JPG';
+import CV from '../../assets/CV.pdf';
 import './HomePage.scss';
 
 const HomePage = (props, ref) => {
@@ -13,7 +15,7 @@ const HomePage = (props, ref) => {
                     <ul className='asideNav-list'>
                         <li className='asideNav-list-element'> <a href="https://www.linkedin.com/in/krzysztof-ziemski"><img src={linkedinIcon} alt='Linkedin icon' /></a></li>
                         <li className='asideNav-list-element'> <a href="http://github.com/KrzysztofZiemski"><img src={githubIcon} alt='Github icon' /></a></li>
-                        <li className='asideNav-list-element asideNav-list-element-text'> <a href="https://www.linkedin.com/in/krzysztof-ziemski">View Profile</a></li>
+                        <li className='asideNav-list-element asideNav-list-element-text'><Link to={CV} target="_blank" download>Pobierz CV</Link></li>
                     </ul>
                 </nav>
                 <main className='homePage-main'>
