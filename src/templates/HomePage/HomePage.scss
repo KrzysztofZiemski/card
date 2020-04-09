@@ -10,13 +10,17 @@
         width: var(--asideBlank);
         background-color: $mint;
 
-        div {
+        &::before {
+            content: '';
+            display: block;
             height: 47%;
+        }
 
-            &:nth-child(2) {
-                background-color: white;
-                height: 53%;
-            }
+        &::after {
+            background-color: $grey;
+            height: 53%;
+            content: '';
+            display: block;
         }
     }
 
@@ -72,7 +76,6 @@
                             // media in variables --asideNavLast used in homePage-main too
                             margin: 0;
                             width: 100%;
-                            height: var(--asideNavLastElement);
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -92,6 +95,11 @@
                                 letter-spacing: 3px;
                             }
                         }
+
+                        button {
+                            width: 100%;
+                            height: var(--asideNavLastElement);
+                        }
                     }
                 }
             }
@@ -101,7 +109,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            background-color: $grey-opacity;
+            background-color: $grey;
             flex-grow: 1;
             padding: 0;
             margin-right: calc(var(--asideBlank) * -1);

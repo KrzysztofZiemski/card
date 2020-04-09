@@ -10,6 +10,25 @@
     list-style: none;
 }
 
+@mixin titlePage($width:80px) {
+    font-size: var(--sizeFontHeaderPage);
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: $width;
+        height: 4px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+    }
+}
+
 @mixin button {}
 
 @mixin rwd($rwdPoint) {

@@ -1,0 +1,71 @@
+@import "./../../sass/colors.scss";
+@import "./../../sass/mixins.scss";
+
+.experience {
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-top: -1px;
+            background-color: $mint;
+            padding-bottom: 10px;
+
+
+            .experience__header {
+                        @include titlePage();
+                        padding: 10px;
+                        width: 100%;
+                        font-weight: normal;
+            }
+
+            .job {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        margin: 10px;
+                        background-color: #fff;
+                        align-items: center;
+
+                        .job__logo {
+                                    max-width: 30%;
+                                    max-width: 223px;
+                                    height: 12vh;
+                        }
+
+                        .company {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    min-height: 15vh;
+                                    width: 70%;
+                                    padding: 0 20px;
+
+                                    .company__name {
+                                                text-align: center;
+                                                margin-bottom: 10px;
+                                    }
+
+                                    .company__position {
+                                                text-align: center;
+                                    }
+                        }
+
+                        .job__description {
+                                    width: 100%;
+                                    font-size: 1rem;
+                                    padding: 10px;
+                        }
+
+                        .show-more-less__btn {
+                                    padding-left: 30px;
+                                    font-size: .8rem;
+                        }
+
+            }
+}
+
+.aboutPage__cv {
+            min-width: 50%;
+            margin: 0 auto;
+}

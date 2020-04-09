@@ -12,7 +12,7 @@ const ShowMore = ({ limit, readMoreText = 'read more', readLessText = 'read less
             const arrayToHide = [];
 
             wordArr.forEach(word => {
-                        if (count <= limit) {
+                        if (count + word.length <= limit) {
                                     arrayToShow.push(word);
                                     count += word.length;
                         } else {
@@ -20,14 +20,14 @@ const ShowMore = ({ limit, readMoreText = 'read more', readLessText = 'read less
                         }
             });
             return (
-                        <div className={`${className} show-more-less`}>
+                        <p className={`${className} show-more-less`} onClick={showAll ? () => setShowAll(false) : null}>
                                     <span className='show-more-less__span'>{arrayToShow.join(' ')}
-                                                {!showAll ? <button className='show-more-less__btn' onClick={() => setShowAll(true)}>{readMoreText}</button> : null}
+                                                {!showAll ? <button className='show-more-less__btn' onClick={() => setShowAll(true)}>... {readMoreText}</button> : null}
                                     </span>
                                     <span className={showAll ? 'show-more-less__span' : 'show-more-less__span show-more-less__span--hide'}>{arrayToHide.join(' ')}
                                                 <button className='show-more-less__btn' onClick={() => setShowAll(false)}>{readLessText}</button>
                                     </span>
-                        </div>
+                        </p>
             )
 }
 

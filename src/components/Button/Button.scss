@@ -1,13 +1,14 @@
-@import "../../sass/colors.scss";
+.bassicButton {
+            padding: 15px 20px;
+            background-color: #0062cc;
+            border: 3px solid transparent;
+            color: #fff;
+            transition: .3s;
+            cursor: pointer;
 
-.mainButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 0 4px 4px;
-  border: none;
-  background-color: transparent;
-
-  &.burger {
-  }
+            &:hover {
+                        background-color: #fff;
+                        color: #0062cc;
+                        border: 3px solid #0062cc;
+            }
 }

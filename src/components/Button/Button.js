@@ -1,16 +1,11 @@
 import React from 'react';
-
 import './Button.scss';
 
-const Button = ({ onClick, className, children }) => {
+const Button = ({ onClick, children, className = '', style }) => {
 
-    return (
-        <button
-            onClick={onClick}
-            className={className ? `mainButton ${className}` : 'mainButton'} >
-            {children}
-        </button >
-    )
+            return (
+                        <button className={`bassicButton ${className}`} onClick={onClick} style={style}>{children} </button>
+            )
 }
 
 export default Button;

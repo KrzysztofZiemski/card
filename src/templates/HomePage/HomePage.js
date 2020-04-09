@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import profile from '../../assets/profile.JPG';
+import Button from '../../components/Button/Button';
 import CV from '../../assets/CV.pdf';
 import './HomePage.scss';
 
 const HomePage = (props, ref) => {
+    const downloadCV = () => {
+        window.open(CV);
+    }
 
     return (
         <div className='homePage'>
@@ -15,7 +19,7 @@ const HomePage = (props, ref) => {
                     <ul className='asideNav-list'>
                         <li className='asideNav-list-element'> <a href="https://www.linkedin.com/in/krzysztof-ziemski"><img src={linkedinIcon} alt='Linkedin icon' /></a></li>
                         <li className='asideNav-list-element'> <a href="http://github.com/KrzysztofZiemski"><img src={githubIcon} alt='Github icon' /></a></li>
-                        <li className='asideNav-list-element asideNav-list-element-text'><Link to={CV} target="_blank" download>Pobierz CV</Link></li>
+                        <li className='asideNav-list-element asideNav-list-element-text'><Button onClick={downloadCV}>Pobierz CV</Button></li>
                     </ul>
                 </nav>
                 <main className='homePage-main'>
@@ -27,7 +31,7 @@ const HomePage = (props, ref) => {
                     <div className='homePage-main__photoContainer'><img src={profile} alt="photos Krzysztof Ziemski" className='homePage-main-profileImage' /></div>
                 </main>
             </div>
-            <div className='homePage-aside'><div></div><div></div></div>
+            <div className='homePage-aside'></div>
         </div>
     )
 }

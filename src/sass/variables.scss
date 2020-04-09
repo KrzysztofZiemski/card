@@ -17,11 +17,13 @@ sans-serif;
 //varaibles css(for responsive value)
 
 :root {
+    //Global
+    --sizeFontHeaderPage: 35px;
     //App
     --asideBlank: 70px;
     //Home page
     --asideNavWidth: 125px;
-    --asideNavLastElement: 40px;
+    --asideNavLastElement: 60px;
     //MainNav
     --navHeight: 200px;
 
@@ -29,7 +31,7 @@ sans-serif;
         //App
         --asideBlank: 180px;
         //HomePage
-        --asideNavLastElement: 50px;
+        --asideNavLastElement: 70px;
         --asideNavWidth: 125px;
 
     }
