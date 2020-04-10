@@ -13,8 +13,9 @@
 @mixin titlePage($width:80px) {
     font-size: var(--sizeFontHeaderPage);
     position: relative;
-    margin-bottom: 30px;
     text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
 
     &::after {
         content: '';

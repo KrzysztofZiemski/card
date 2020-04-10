@@ -1,24 +1,43 @@
 @import "./../../sass/colors.scss";
 @import "./../../sass/mixins.scss";
+@import "./../../sass/variables.scss";
 
 .aboutPage {
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-content: center;
   flex-wrap: wrap;
   min-height: 100vh;
   background: $grey;
-  background: linear-gradient(to bottom, $grey 0%, rgba(255, 255, 255, 1) 50%, $mint 100%);
+  background: linear-gradient(to bottom,
+      $grey 0%,
+      rgba(255, 255, 255, 1) 50%,
+      $mint 100%);
   line-height: 1.5;
   font-size: 1rem;
-  padding: 70px 20px;
+  padding: 40px 20px;
+
+  @include rwd(tablet) {
+    flex-direction: row;
+  }
+
+  @include rwd(desctop) {
+    line-height: 2;
+  }
 
   .aboutPage__header {
     width: 100%;
     @include titlePage;
+    margin-bottom: 40px;
   }
 
   .description {
-    width: 50%;
+    width: 100%;
+
+    @include rwd(tablet) {
+      width: 50%;
+    }
 
     .description__paragraph {
       text-align: left;
@@ -27,20 +46,56 @@
       font-family: "Raleway";
       mix-blend-mode: difference;
       z-index: 1;
+
+      @include rwd(desctop) {
+        padding-bottom: 20px;
+      }
+    }
+
+    @include rwd(tablet) {
+      width: 50%;
     }
   }
 
-  .skills {
+  .skillsSection {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
 
-    .skills__element {
+    @include rwd(tablet) {
+      width: 50%;
+    }
 
-      margin: 10px 5%;
+    .skillsContainer {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      margin: 2% 0;
 
+      @include rwd(small) {
+        width: 30%;
+      }
+
+      @include rwd(tablet) {
+        width: 30%;
+      }
+
+      .skillsContainer__element {
+        width: 100px;
+        height: 100px;
+
+        @include rwd(desctop) {
+          width: 130px;
+          height: 130px;
+        }
+
+        @include rwd(large) {
+          width: 150px;
+          height: 150px;
+        }
+      }
     }
   }
 }

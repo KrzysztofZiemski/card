@@ -4,10 +4,7 @@ import './StackElement.scss';
 const StackElement = ({ className, children, style }) => {
 
             return (
-                        <div className={`stackComponent ${className}`} style={style}>
-                                    <span className='aside'></span>
-                                    <span className='aside'></span>
-                                    <span className='aside'></span>
+                        <div className={className ? `stackComponent ${className}` : 'stackComponent'} style={style}>
                                     <span className='aside'></span>
                                     <span className='main'>{children}</span>
                         </div>
