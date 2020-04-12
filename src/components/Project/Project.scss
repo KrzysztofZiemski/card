@@ -1,0 +1,176 @@
+@import '../../sass/colors.scss';
+@import '../../sass/mixins.scss';
+@import '../../sass/variables.scss';
+
+.projectPortfolio {
+            display: flex;
+            flex-direction: column;
+            padding-top: 15px;
+
+            @include rwd(desctop) {
+                        flex-direction: row;
+                        padding-top: 80px;
+            }
+
+            .viewProjectContainer {
+                        position: relative;
+                        width: 100%;
+                        text-align: center;
+                        overflow: hidden;
+                        $paddingIMG: 10px;
+
+                        &::after {
+                                    @include rwd(desctop) {
+                                                display: block;
+                                                content: '';
+                                                position: absolute;
+                                                width: calc(100% - #{$paddingIMG}*2);
+                                                height: 71%;
+                                                top: $paddingIMG;
+                                                left: $paddingIMG;
+                                                background-color: rgba(0, 0, 0, .8);
+                                                border-radius: 10px;
+                                                visibility: hidden;
+                                    }
+                        }
+
+                        @include rwd(desctop) {
+                                    width: 50%;
+                                    width: auto;
+                        }
+
+                        .viewProjectContainer__image {
+                                    max-height: 350px;
+                                    max-width: 100%;
+                                    padding: $paddingIMG;
+                        }
+
+                        .viewProjectContainer__links {
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                    width: 100%;
+                                    background-color: #413434;
+
+                                    @include rwd(tablet) {
+                                                justify-content: center;
+                                    }
+
+                                    @include rwd(desctop) {
+                                                position: absolute;
+                                                top: 35%;
+                                                background-color: transparent;
+                                                // visibility: hidden;
+                                                z-index: 1;
+                                    }
+
+                                    .projectLinks__link {
+                                                transition: .3s;
+
+                                                @include rwd(tablet) {
+                                                            width: 20%;
+                                                }
+
+                                                @include rwd(desctop) {
+                                                            border: 1px solid #f1f1f1;
+                                                }
+
+                                                &:nth-of-type(1) {
+                                                            @include rwd(desctop) {
+                                                                        display: block;
+                                                                        margin-right: 100%;
+                                                            }
+                                                }
+
+                                                &:nth-of-type(2) {
+                                                            @include rwd(desctop) {
+                                                                        display: block;
+                                                                        margin-left: 100%;
+                                                            }
+                                                }
+
+                                                a {
+                                                            display: block;
+                                                            text-decoration: none;
+                                                            color: inherit;
+                                                            padding: 10px;
+                                                            text-transform: capitalize;
+                                                            color: $white;
+                                                }
+
+                                                &:hover {
+                                                            @include rwd(desctop) {
+                                                                        background-color: #f1f1f1;
+
+                                                                        a {
+                                                                                    color: $text-main;
+                                                                        }
+                                                            }
+                                                }
+                                    }
+                        }
+
+                        &:hover {
+                                    &::after {
+                                                visibility: visible;
+                                    }
+
+                                    .projectLinks__link {
+                                                &:nth-of-type(1) {
+
+                                                            @include rwd(desctop) {
+                                                                        display: block;
+                                                                        margin-right: 10px;
+                                                            }
+                                                }
+
+                                                &:nth-of-type(2) {
+
+                                                            @include rwd(desctop) {
+                                                                        display: block;
+                                                                        margin-left: 10px;
+                                                            }
+                                                }
+                                    }
+
+                                    @include rwd(desctop) {}
+                        }
+
+            }
+
+            .descriptionProjectContainer {
+                        padding: 20px 10px;
+
+                        @include rwd(desctop) {
+                                    width: 50%;
+                        }
+
+                        .descriptionProjectContainer__header {
+                                    text-align: center;
+                                    font-size: 1.1rem;
+                                    padding: 10px 0;
+                        }
+
+                        .descriptionProjectContainer__stack {
+                                    padding: 10px 0;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    border-bottom: 3px solid #413434;
+                                    border-top: 3px solid #413434;
+
+                                    span {
+                                                margin: 1%;
+                                                text-transform: uppercase;
+                                    }
+                        }
+
+                        .descriptionProjectContainer__description {
+                                    padding: 20px 0;
+                                    line-height: 1.5;
+
+                                    @include rwd(tablet) {
+                                                text-align: justify;
+                                    }
+                        }
+            }
+}

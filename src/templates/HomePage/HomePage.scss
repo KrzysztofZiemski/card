@@ -91,7 +91,6 @@
                             }
 
                             @include rwd(desctop) {
-                                font-size: 1.7rem;
                                 letter-spacing: 3px;
                             }
                         }
@@ -99,6 +98,10 @@
                         button {
                             width: 100%;
                             height: var(--asideNavLastElement);
+
+                            @include rwd(desctop) {
+                                font-size: 1.7rem;
+                            }
                         }
                     }
                 }

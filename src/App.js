@@ -29,21 +29,21 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="pages-mainNav">
+        <header className="App__mainNav">
           <MainNavbar scrollToRef={scrollToRef} pagesRef={{ homePageRef, aboutPageRef, projectPageRef, experiencePageRef }} />
         </header>
         <Switch>
           <Route path='/' >
-            <section ref={homePageRef}>
+            <section ref={homePageRef} className='App__page'>
               <HomePage />
             </section>
-            <section ref={aboutPageRef}>
+            <section ref={aboutPageRef} className='App__page'>
               <AboutPage />
             </section>
-            <section ref={experiencePageRef}>
+            <section ref={experiencePageRef} className='App__page'>
               <ExperiencePage />
             </section>
-            <section ref={projectPageRef}>
+            <section ref={projectPageRef} className='App__page'>
               <ProjectsPage />
             </section>
 

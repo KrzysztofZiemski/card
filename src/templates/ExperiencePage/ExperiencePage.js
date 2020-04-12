@@ -13,9 +13,9 @@ const ExperiencePage = () => {
                         window.open(CV);
             }
             return (
-                        <section className='experience'>
+                        <div className='experience'>
 
-                                    <h1 className='experience__header'>Doświadczenie</h1>
+                                    <h1 className='experience__header'>Doświadczenie zawodowe</h1>
                                     <article className='job'>
                                                 <img className='job__logo' src={ca_logo} alt="Open Finance logo" />
                                                 <div className='company'>
@@ -72,8 +72,8 @@ const ExperiencePage = () => {
                                     </article>
 
 
-                                    <Button className='aboutPage__cv' onClick={downloadCV}>Pobierz CV</Button>
-                        </section>
+                                    <Button className='aboutPage__cvBtn' onClick={downloadCV}>Pobierz CV</Button>
+                        </div>
 
             )
 }

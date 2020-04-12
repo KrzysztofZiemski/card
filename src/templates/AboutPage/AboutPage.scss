@@ -6,17 +6,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content: flex-start;
   flex-wrap: wrap;
-  min-height: 100vh;
+  padding: 20px;
   background: $grey;
   background: linear-gradient(to bottom,
       $grey 0%,
-      rgba(255, 255, 255, 1) 50%,
+      $lightGrey 50%,
       $mint 100%);
   line-height: 1.5;
   font-size: 1rem;
-  padding: 40px 20px;
 
   @include rwd(tablet) {
     flex-direction: row;
@@ -28,7 +27,7 @@
 
   .aboutPage__header {
     width: 100%;
-    @include titlePage;
+    @include titlePage(50px);
     margin-bottom: 40px;
   }
 
@@ -46,6 +45,10 @@
       font-family: "Raleway";
       mix-blend-mode: difference;
       z-index: 1;
+
+      @include rwd(tablet) {
+        text-align: justify;
+      }
 
       @include rwd(desctop) {
         padding-bottom: 20px;
@@ -87,14 +90,10 @@
         height: 100px;
 
         @include rwd(desctop) {
-          width: 130px;
-          height: 130px;
+          width: 120px;
+          height: 120px;
         }
 
-        @include rwd(large) {
-          width: 150px;
-          height: 150px;
-        }
       }
     }
   }

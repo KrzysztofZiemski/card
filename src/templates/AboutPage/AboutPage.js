@@ -5,7 +5,7 @@ import './AboutPage.scss';
 
 const AboutPage = () => {
             return (
-                        <section className="aboutPage">
+                        <div className="aboutPage">
                                     <h1 className='aboutPage__header'>O mnie </h1>
                                     <article className='description'>
                                                 <p className='description__paragraph' >Nazywam się Krzysztof Ziemski.</p>
@@ -28,9 +28,8 @@ const AboutPage = () => {
                                                 <div className='skillsContainer'><StackElement className='skillsContainer__element'>sass</StackElement></div>
                                                 <div className='skillsContainer'> <StackElement className='skillsContainer__element'>npm</StackElement></div>
                                                 <div className='skillsContainer'><StackElement className='skillsContainer__element'>node</StackElement></div>
-                                                <div className='skillsContainer'><StackElement className='skillsContainer__element'>node</StackElement></div>
                                     </article>
-                        </section >
+                        </div >
             )
 }
 

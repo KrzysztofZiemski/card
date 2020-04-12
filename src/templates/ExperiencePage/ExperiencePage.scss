@@ -8,11 +8,13 @@
             flex-wrap: wrap;
             position: relative;
             margin-top: -1px;
-            background-color: $mint;
-            padding-bottom: 10px;
+            background: linear-gradient(to bottom,
+                                    $mint 0%,
+                                    $lightGrey 50%,
+                                    $mint 100%);
 
             .experience__header {
-                        @include titlePage();
+                        @include titlePage(160px);
                         padding: 10px;
                         width: 100%;
                         font-weight: normal;
@@ -36,13 +38,17 @@
                         }
 
                         .job__logo {
-                                    max-width: 30%;
-                                    max-width: 223px;
-                                    height: 10vh;
+                                    max-width: 20%;
+                                    max-height: 10vh;
+
+                                    @include rwd(tablet) {
+                                                max-height: 7vh;
+                                    }
+
                         }
 
                         .company {
-                                    flex-grow: 1;
+                                    width: 80%;
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: center;
@@ -54,11 +60,27 @@
                                                 text-align: center;
                                                 margin-bottom: 10px;
                                                 font-size: 1.2rem;
+
+                                                @include rwd(small) {
+                                                            font-size: 1rem;
+                                                }
+
+                                                @include rwd(desctop) {
+                                                            font-size: 1.4rem;
+                                                }
                                     }
 
                                     .company__position {
                                                 text-align: center;
                                                 font-size: 1.1rem;
+
+                                                @include rwd(small) {
+                                                            font-size: 1rem;
+                                                }
+
+                                                @include rwd(desctop) {
+                                                            font-size: 1.3rem;
+                                                }
                                     }
                         }
 
@@ -66,17 +88,37 @@
                                     width: 100%;
                                     font-size: 1rem;
                                     padding: 10px;
+
+                                    @include rwd(tablet) {
+                                                text-align: justify;
+                                    }
                         }
 
                         .show-more-less__btn {
-                                    padding-left: 30px;
+                                    padding-left: 10px;
                                     font-size: .8rem;
                         }
 
             }
 }
 
-.aboutPage__cv {
-            min-width: 50%;
-            margin: 0 auto;
+.aboutPage__cvBtn {
+            width: 100%;
+            margin: 5px;
+
+
+            @include rwd(small) {
+                        width: 80%;
+                        margin: 5px auto;
+            }
+
+            @include rwd(medium) {
+                        width: 40%;
+                        min-width: 150px;
+            }
+
+            @include rwd(desctop) {
+                        margin: 10px 40%;
+                        width: 20%;
+            }
 }

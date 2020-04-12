@@ -10,4 +10,9 @@
 .App {
   font-family: $textFont;
   scroll-behavior: smooth;
+
+  .App__page {
+    overflow: hidden;
+    position: relative;
+  }
 }
