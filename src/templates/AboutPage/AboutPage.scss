@@ -7,10 +7,7 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  align-content: flex-start;
-  flex-wrap: wrap;
   padding: 20px;
-  background: $grey;
   background: linear-gradient(to bottom,
       $grey 0%,
       $lightGrey 50%,
@@ -18,83 +15,89 @@
   line-height: 1.5;
   font-size: 1rem;
 
-  @include rwd(tablet) {
-    flex-direction: row;
-  }
-
   @include rwd(desctop) {
     line-height: 2;
   }
 
   .aboutPage__header {
     width: 100%;
-    @include titlePage(50px);
+    @include titlePage;
     flex: auto;
   }
 
-  .description {
-    width: 100%;
-
-    @include rwd(tablet) {
-      width: 50%;
-    }
-
-    .description__paragraph {
-      text-align: left;
-      padding-bottom: 10px;
-      color: $white;
-      font-family: "Raleway";
-      mix-blend-mode: difference;
-      z-index: 1;
-
-      @include rwd(tablet) {
-        text-align: justify;
-      }
-
-      @include rwd(desctop) {
-        padding-bottom: 20px;
-      }
-    }
-
-    @include rwd(tablet) {
-      width: 50%;
-    }
-  }
-
-  .skillsSection {
+  .aboutPage__content {
+    flex-grow: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-direction: column;
 
     @include rwd(tablet) {
-      width: 50%;
+      flex-direction: row;
     }
 
-    .skillsContainer {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      margin: 2% 0;
-
-      @include rwd(small) {
-        width: 30%;
-      }
+    .description {
+      width: 100%;
 
       @include rwd(tablet) {
-        width: 30%;
+        width: 50%;
       }
 
-      .skillsContainer__element {
-        width: 100px;
-        height: 100px;
+      .description__paragraph {
+        text-align: left;
+        padding-bottom: 10px;
+        color: $white;
+        font-family: "Raleway";
+        mix-blend-mode: difference;
+        z-index: 1;
 
-        @include rwd(desctop) {
-          width: 120px;
-          height: 120px;
+        @include rwd(tablet) {
+          text-align: justify;
         }
 
+        @include rwd(desctop) {
+          padding-bottom: 20px;
+        }
+      }
+
+      @include rwd(tablet) {
+        width: 50%;
+      }
+    }
+
+    .skillsSection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      @include rwd(tablet) {
+        width: 50%;
+      }
+
+      .skillsContainer {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        margin: 2% 0;
+
+        @include rwd(small) {
+          width: 30%;
+        }
+
+        @include rwd(tablet) {
+          width: 30%;
+        }
+
+        .skillsContainer__element {
+          width: 100px;
+          height: 100px;
+
+          @include rwd(desctop) {
+            width: 120px;
+            height: 120px;
+          }
+
+        }
       }
     }
   }

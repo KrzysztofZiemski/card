@@ -18,7 +18,7 @@
             }
 
             .experience__header {
-                        @include titlePage(160px);
+                        @include titlePage;
                         width: 100%;
                         flex: auto;
             }
@@ -38,7 +38,6 @@
 
                         @include rwd(desctop) {
                                     width: 60%;
-                                    margin: 3px auto;
                                     padding: 0 10px;
                         }
 
@@ -128,7 +127,8 @@
             }
 
             @include rwd(desctop) {
-                        margin: 10px 40%;
+                        margin: 0px 40%;
+                        padding: 0;
                         width: 20%;
             }
 }

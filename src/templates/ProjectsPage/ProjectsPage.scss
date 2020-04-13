@@ -15,7 +15,7 @@
             }
 
             .projectsPage__header {
-                        @include titlePage(60px);
+                        @include titlePage;
                         text-align: center;
                         font-family: $headersFont;
             }
