@@ -1,0 +1,73 @@
+@import "./../../sass/colors.scss";
+@import "./../../sass/mixins.scss";
+@import "./../../sass/variables.scss";
+
+.coursesPage {
+            min-height: 100vh;
+            line-height: 2rem;
+            background: linear-gradient(to bottom,
+                                    $mint 0%,
+                                    $lightGrey 50%,
+                                    $mint 100%);
+
+            @include rwd(tablet) {
+                        display: flex;
+                        flex-direction: column;
+            }
+
+            .coursesPage__header {
+                        text-align: center;
+                        @include titlePage(50px);
+                        flex: auto;
+            }
+
+            .coursesContainer {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        @include reset-list;
+                        font-size: 1.2rem;
+                        padding: 10px;
+
+                        @include rwd(tablet) {
+                                    flex-grow: 1;
+                                    flex-direction: row;
+                        }
+
+                        .listByType {
+                                    width: 100%;
+                                    padding: 10px 0;
+
+                                    .listByType__header {
+                                                font-size: 1.2rem;
+                                                margin-bottom: 15px;
+                                                text-align: center;
+
+                                    }
+
+                                    .listByType__list {
+                                                font-size: 1rem;
+
+                                                .course {
+                                                            padding: 15px;
+                                                            display: flex;
+
+                                                            .course__imgConteiner {
+                                                                        margin-right: 2%;
+
+                                                                        img {
+                                                                                    width: 10px;
+
+                                                                                    @include rwd(tablet) {
+                                                                                                width: 20px;
+                                                                                    }
+                                                                        }
+                                                            }
+
+                                                            .course__content {}
+
+                                                }
+                                    }
+                        }
+            }
+}

@@ -5,7 +5,7 @@ import burgerIcon from '../../assets/burger-icon.svg';
 import BurgerButton from '../BurgerButton/BurgerButton';
 
 const MainNavbar = ({ scrollToRef, pagesRef }) => {
-    const { homePageRef, aboutPageRef, projectPageRef, experiencePageRef } = pagesRef;
+    const { homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage } = pagesRef;
 
     let [hideMenu, setHideMenu] = useState(true);
 
@@ -17,7 +17,8 @@ const MainNavbar = ({ scrollToRef, pagesRef }) => {
                 </li>
                 <li className='mainNavbar-listElement hide'><Link to='/' onClick={() => scrollToRef(homePageRef)}>Home</Link></li>
                 <li className='mainNavbar-listElement hide'><Link to='/about' onClick={() => scrollToRef(aboutPageRef)}>O mnie</Link></li>
-                <li className='mainNavbar-listElement hide'><Link to='/about' onClick={() => scrollToRef(experiencePageRef)}>Historia zatrudnienia</Link></li>
+                <li className='mainNavbar-listElement hide'><Link to='/courses' onClick={() => scrollToRef(coursesPage)}>Kursy</Link></li>
+                <li className='mainNavbar-listElement hide'><Link to='/jobs' onClick={() => scrollToRef(experiencePageRef)}>Historia zatrudnienia</Link></li>
                 <li className='mainNavbar-listElement'><Link to='/projects' onClick={() => scrollToRef(projectPageRef)}>Projekty</Link></li>
             </ul>
             <ul className={hideMenu ? 'slideNavbar hide' : 'slideNavbar'}>

@@ -5,6 +5,7 @@
 .aboutPage {
   position: relative;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -28,7 +29,7 @@
   .aboutPage__header {
     width: 100%;
     @include titlePage(50px);
-    margin-bottom: 40px;
+    flex: auto;
   }
 
   .description {

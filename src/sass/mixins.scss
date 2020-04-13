@@ -12,22 +12,14 @@
 
 @mixin titlePage($width:80px) {
     font-size: var(--sizeFontHeaderPage);
+    font-family: $headersFont;
     position: relative;
     text-align: center;
     font-size: 1.4rem;
-    padding-bottom: 10px;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 20px;
 
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: $width;
-        height: 4px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: black;
-    }
 }
 
 @mixin button {}

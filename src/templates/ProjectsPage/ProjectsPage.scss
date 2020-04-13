@@ -1,5 +1,6 @@
 @import '../../sass/colors.scss';
 @import '../../sass/mixins.scss';
+@import '../../sass/variables.scss';
 
 .projectsPage {
             padding: 20px;
@@ -9,10 +10,13 @@
                                     rgba(255, 255, 255, 1) 50%,
                                     $mint 100%);
 
+            @include rwd(desctop) {
+                        line-height: 2;
+            }
+
             .projectsPage__header {
                         @include titlePage(60px);
-                        font-size: 1.4rem;
                         text-align: center;
-                        margin: 0;
+                        font-family: $headersFont;
             }
 }

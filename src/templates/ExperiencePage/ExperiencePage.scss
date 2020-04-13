@@ -13,11 +13,14 @@
                                     $lightGrey 50%,
                                     $mint 100%);
 
+            @include rwd(desctop) {
+                        line-height: 2;
+            }
+
             .experience__header {
                         @include titlePage(160px);
-                        padding: 10px;
                         width: 100%;
-                        font-weight: normal;
+                        flex: auto;
             }
 
             .job {
@@ -35,6 +38,8 @@
 
                         @include rwd(desctop) {
                                     width: 60%;
+                                    margin: 3px auto;
+                                    padding: 0 10px;
                         }
 
                         .job__logo {
@@ -66,7 +71,7 @@
                                                 }
 
                                                 @include rwd(desctop) {
-                                                            font-size: 1.4rem;
+                                                            font-size: 1rem;
                                                 }
                                     }
 
@@ -79,7 +84,7 @@
                                                 }
 
                                                 @include rwd(desctop) {
-                                                            font-size: 1.3rem;
+                                                            font-size: 1rem;
                                                 }
                                     }
                         }
@@ -91,6 +96,11 @@
 
                                     @include rwd(tablet) {
                                                 text-align: justify;
+                                    }
+
+                                    @include rwd(desctop) {
+                                                padding: 5px;
+                                                font-size: .9rem;
                                     }
                         }
 

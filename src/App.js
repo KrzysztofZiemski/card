@@ -5,7 +5,7 @@ import ExperiencePage from './templates/ExperiencePage/ExperiencePage';
 import HomePage from './templates/HomePage/HomePage';
 import AboutPage from './templates/AboutPage/AboutPage';
 import ProjectsPage from './templates/ProjectsPage/ProjectsPage';
-
+import CoursesPage from './templates/CoursesPage/CoursesPage';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import './App.scss';
@@ -23,14 +23,15 @@ function App() {
   };
   let homePageRef = useRef(null);
   let aboutPageRef = useRef(null);
-  let stackPageRef = useRef(null);
+  let coursesPage = useRef(null);
   let projectPageRef = useRef(null);
   let experiencePageRef = useRef(null);
+
   return (
     <Router>
       <div className="App">
         <header className="App__mainNav">
-          <MainNavbar scrollToRef={scrollToRef} pagesRef={{ homePageRef, aboutPageRef, projectPageRef, experiencePageRef }} />
+          <MainNavbar scrollToRef={scrollToRef} pagesRef={{ homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage }} />
         </header>
         <Switch>
           <Route path='/' >
@@ -39,6 +40,9 @@ function App() {
             </section>
             <section ref={aboutPageRef} className='App__page'>
               <AboutPage />
+            </section>
+            <section ref={coursesPage} className='App__page'>
+              <CoursesPage />
             </section>
             <section ref={experiencePageRef} className='App__page'>
               <ExperiencePage />
@@ -51,7 +55,7 @@ function App() {
         </Switch>
 
       </div>
-    </Router>
+    </Router >
   );
 }
 
