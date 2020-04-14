@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainNavbar from './components/MainNavbar/MainNavbar';
 import ExperiencePage from './templates/ExperiencePage/ExperiencePage';
@@ -10,9 +10,10 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import './App.scss';
 //npm install react-animate-on-scroll --save
+const languages = ['pl', 'en'];
 
 function App() {
-
+  let [lang, setLang] = useState(languages[0]);
   const scrollToRef = (ref) => {
     for (let i = 1; i <= ref.current.offsetTop; i++) {
       setTimeout(() => {
@@ -31,24 +32,24 @@ function App() {
     <Router>
       <div className="App">
         <header className="App__mainNav">
-          <MainNavbar scrollToRef={scrollToRef} pagesRef={{ homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage }} />
+          <MainNavbar scrollToRef={scrollToRef} lang={lang} pagesRef={{ homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage }} />
         </header>
         <Switch>
           <Route path='/' >
             <section ref={homePageRef} className='App__page'>
-              <HomePage />
+              <HomePage lang={lang} />
             </section>
             <section ref={aboutPageRef} className='App__page'>
-              <AboutPage />
+              <AboutPage lang={lang} />
             </section>
             <section ref={coursesPage} className='App__page'>
-              <CoursesPage />
+              <CoursesPage lang={lang} />
             </section>
             <section ref={experiencePageRef} className='App__page'>
-              <ExperiencePage />
+              <ExperiencePage lang={lang} />
             </section>
             <section ref={projectPageRef} className='App__page'>
-              <ProjectsPage />
+              <ProjectsPage lang={lang} />
             </section>
 
           </Route>

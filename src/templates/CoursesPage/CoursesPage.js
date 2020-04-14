@@ -1,10 +1,10 @@
 import React from 'react';
 import './CoursesPage.scss';
 import arrow from '../../assets/arrowCours.png';
+import { coursesPage } from '../../content.json';
 
-const Courses = () => {
-            const stationaryCourses = [' Bootcamp organizowany przez c_school Full stack - React developer 10/2019 - 03/2020'];
-            const webCourses = ['Udemy kurs "Web Deweloper od podstaw"', 'Udemy kurs "Front-end zaawansowany"', 'Udemy kurs "Programowanie w javascript"', 'Udemy kurs "React od podstaw"', 'Udemy kurs "Node.js Express i MongoDB"'];
+const Courses = ({ lang }) => {
+            const content = coursesPage[lang];
 
             const coursesList = (list) => {
                         return list.map((element, index) => {
@@ -17,19 +17,19 @@ const Courses = () => {
             }
             return (
                         <div className='coursesPage'>
-                                    <h1 className='coursesPage__header'>Kursy</h1>
+                                    <h1 className='coursesPage__header'>{content.title}</h1>
                                     <ul className='coursesContainer'>
                                                 <li className='listByType'>
-                                                            <h2 className='listByType__header'>Kurs stacjonarny</h2>
+                                                            <h2 className='listByType__header'>{content.stationaryNameList}</h2>
                                                             <ul className='listByType__list'>
-                                                                        {coursesList(stationaryCourses)}
+                                                                        {coursesList(content.stationaryCourses)}
                                                             </ul>
 
                                                 </li>
                                                 <li className='listByType'>
-                                                            <h2 className='listByType__header'>Kursy udemy</h2>
+                                                            <h2 className='listByType__header'>{content.webNameList}</h2>
                                                             <ul className='listByType__list'>
-                                                                        {coursesList(webCourses)}
+                                                                        {coursesList(content.webCourses)}
                                                             </ul>
 
                                                 </li>

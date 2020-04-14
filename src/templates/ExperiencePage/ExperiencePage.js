@@ -7,67 +7,69 @@ import ca_logo from '../../assets/ca_logo.png';
 import stefczyk_logo from '../../assets/skok_logo.png';
 import ing_logo from '../../assets/ing_logo.png';
 import open_logo from '../../assets/open_logo.png';
+import { experiencePage } from '../../content.json';
 
-const ExperiencePage = () => {
+const ExperiencePage = ({ lang }) => {
+            const content = experiencePage[lang];
+
+
             const downloadCV = () => {
                         window.open(CV);
             }
+
             return (
                         <div className='experience'>
 
-                                    <h1 className='experience__header'>Doświadczenie zawodowe</h1>
+                                    <h1 className='experience__header'>{content.title}</h1>
                                     <article className='job'>
-                                                <img className='job__logo' src={ca_logo} alt="Open Finance logo" />
+                                                <img className='job__logo' src={ca_logo} alt="Credit Agricole logo" />
                                                 <div className='company'>
-                                                            <h2 className='company__name'>Credit Agricole</h2>
-                                                            <p className='company__position'>Doradca klienta</p>
+                                                            <h2 className='company__name'>{content.companies.creditAgricole.name}</h2>
+                                                            <p className='company__position'>{content.companies.creditAgricole.position}</p>
                                                 </div>
                                                 <div className='job__description'>
                                                             <ShowMore limit={0} readMoreText={'czytaj więcej'} readLessText={'mniej'}>
-                                                                        Byłem odpowiedzialny głównie za obługę bieżącą klientów banku. Zajmowałem się kredytami gotówkowymi, kartami oraz rachunkami. W razie konieczności pomagałem w sprawach technicznych związanych z bankowością internetową.
-                                                                        </ShowMore>
+                                                                        {content.companies.creditAgricole.description}
+                                                            </ShowMore>
                                                 </div>
                                     </article>
                                     <article className='job'>
-                                                <img className='job__logo' src={stefczyk_logo} alt="Open Finance logo" />
+                                                <img className='job__logo' src={stefczyk_logo} alt="Stefczyk Finance logo" />
                                                 <div className='company'>
-                                                            <h2 className='company__name'>Stefczyk Finanse</h2>
-                                                            <p className='company__position'>Doradca klienta</p>
+                                                            <h2 className='company__name'>{content.companies.stefczykFinance.name}</h2>
+                                                            <p className='company__position'>{content.companies.stefczykFinance.position}</p>
                                                 </div>
                                                 <div className='job__description'>
                                                             <ShowMore limit={0} readMoreText={'czytaj więcej'} readLessText={'mniej'}>
-                                                                        Sprzedaż produktów kredytowych.
+                                                                        {content.companies.stefczykFinance.description}
 
-                                                                        </ShowMore>
+                                                            </ShowMore>
                                                 </div>
                                     </article>
                                     <article className='job'>
-                                                <img className='job__logo' src={ing_logo} alt="Open Finance logo" />
+                                                <img className='job__logo' src={ing_logo} alt="ING Bank Śląski logo" />
                                                 <div className='company'>
-                                                            <h2 className='company__name'>ING Bank Śląski</h2>
-                                                            <p className='company__position'>Doradca klient</p>
+                                                            <h2 className='company__name'>{content.companies.ingBankSlaski.name}</h2>
+                                                            <p className='company__position'>{content.companies.ingBankSlaski.position}</p>
                                                 </div>
                                                 <div className='job__description'>
                                                             <ShowMore limit={0} readMoreText={'czytaj więcej'} readLessText={'mniej'}>
-                                                                        Obsługa klienta oraz sprzedaż kredytów.
-                                                                        Sprzedaż funduszy inwestycyjnych.
-                                                                        Przyjmowanie wniosków hipotecznych.
+                                                                        {content.companies.ingBankSlaski.description}
 
-                                                                        </ShowMore>
+                                                            </ShowMore>
                                                 </div>
                                     </article>
                                     <article className='job'>
                                                 <img className='job__logo' src={open_logo} alt="Open Finance logo" />
                                                 <div className='company'>
-                                                            <h2 className='company__name'>Open Finance</h2>
-                                                            <p className='company__position'>Internetowy doradca finansowy</p>
+                                                            <h2 className='company__name'>{content.companies.openFinance.name}</h2>
+                                                            <p className='company__position'>{content.companies.openFinance.position}</p>
                                                 </div>
                                                 <div className='job__description'>
                                                             <ShowMore limit={0} readMoreText={'czytaj więcej'} readLessText={'mniej'}>
-                                                                        Telefoniczna sprzedaż lokat,rachunków,IKE, funduszy
-                                                                        inwestycyjnych.
+                                                                        {content.companies.openFinance.description}
 
-                                                                        </ShowMore>
+                                                            </ShowMore>
                                                 </div>
                                     </article>
 

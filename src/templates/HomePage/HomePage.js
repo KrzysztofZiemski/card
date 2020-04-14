@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import profile from '../../assets/profile.JPG';
 import Button from '../../components/Button/Button';
 import CV from '../../assets/CV.pdf';
+import { homePage } from '../../content.json';
 import './HomePage.scss';
 
-const HomePage = (props, ref) => {
+const HomePage = ({ lang }) => {
+    const content = homePage[lang];
+
     const downloadCV = () => {
         window.open(CV);
     }
@@ -19,13 +21,13 @@ const HomePage = (props, ref) => {
                     <ul className='asideNav-list'>
                         <li className='asideNav-list-element'> <a href="https://www.linkedin.com/in/krzysztof-ziemski"><img src={linkedinIcon} alt='Linkedin icon' /></a></li>
                         <li className='asideNav-list-element'> <a href="http://github.com/KrzysztofZiemski"><img src={githubIcon} alt='Github icon' /></a></li>
-                        <li className='asideNav-list-element asideNav-list-element-text'><Button onClick={downloadCV}>Pobierz CV</Button></li>
+                        <li className='asideNav-list-element asideNav-list-element-text'><Button onClick={downloadCV}>{content.downloadButton}</Button></li>
                     </ul>
                 </nav>
                 <main className='homePage-main'>
                     <div className='headers'>
-                        <h1 className='headers-header-h1'>Krzysztof Ziemski</h1>
-                        <h2 className='headers-header-h2'>Junior Front-end Developer</h2>
+                        <h1 className='headers-header-h1'>{content.name}</h1>
+                        <h2 className='headers-header-h2'>{content.wonnaBe[0]}</h2>
                     </div>
                     <a href="http://github.com/KrzysztofZiemski" className='homePage-main-icon'><img src={githubIcon} alt='Github icon' /></a>
                     <div className='homePage-main__photoContainer'><img src={profile} alt="photos Krzysztof Ziemski" className='homePage-main-profileImage' /></div>

@@ -1,0 +1,110 @@
+{
+            "homePage": {
+                        "pl": {
+                                    "downloadButton": "Pobierz CV",
+                                    "name": "Krzysztof Ziemski",
+                                    "wonnaBe": ["Junior front-End Developer", "Trainee front-End Developer"]
+                        }
+            },
+            "mainNavbar": {
+                        "pl": {
+                                    "homeLink": "Start",
+                                    "aboutLink": "O mnie",
+                                    "coursesLink": "Kursy",
+                                    "jobsLink": "Historia zatrudnienia",
+                                    "projectsLink": "Projekty"
+                        }
+            },
+            "aboutPage": {
+                        "pl": {
+                                    "title": "O mnie",
+                                    "descriptionParagraph": ["Nazywam się Krzysztof Ziemski.", "Jestem po trzydziestce (jeżeli chodzi o wiek).", "Ze względu na własne wartości, postanowiłem opuścić aktualną branżę - bankowość. Dzięki temu zająłem się tym co od dawna mnie ciekawi", "Uczę się zagadnień związanych web developmentem od jesieni 2018 roku. Nauka jest dla mnie przyjemnością, poszukuje jednak możliwości zatrudnienia, aby przyspieszyć ten proces.", "Jestem ambitną osobą, która nie narzeka na nudę. Zawsze umiałem zagospodarować swój czas - czy to ucząc się gry na gitarze, czy przebywając dziesiątki kilometrów biegając po parkach.", "Cechuję mnie wysoka determinacja, która pomagała mi zawsze w życiu osobistym i zawodowym.", "Opanowałem część potrzebnych umiejętności na stanowisku web developera."],
+                                    "skills": ["css", "html", "javascript", "react", "rwd", "git", "sass", "npm", "node"]
+                        }
+            },
+            "coursesPage": {
+                        "pl": {
+                                    "title": "Kursy",
+                                    "stationaryNameList": "Kurs stacjonarny",
+                                    "webNameList": "Kurs stacjonarny",
+                                    "stationaryCourses": ["Bootcamp organizowany przez c_school Full stack - React developer 10/2019 - 03/2020"],
+                                    "webCourses": ["Udemy kurs \"Web Deweloper od podstaw \"", "Udemy kurs \"Front - end zaawansowany\"", "Udemy kurs \"Programowanie javascript \"", "Udemy kurs \"React od podstaw\"", "Udemy kurs \"Node.js Express i MongoDB \""]
+                        }
+            },
+            "experiencePage": {
+                        "pl": {
+                                    "title": "Doświadczenie zawodowe",
+                                    "companies": {
+                                                "creditAgricole": {
+                                                            "name": "Credit Agricole",
+                                                            "position": "Doradca klienta",
+                                                            "description": "Byłem odpowiedzialny za obługę bieżącą klientów banku oraz umawiałem spotkania z klientami w celu przedstawienia bieżącej oferty banku. Zajmowałem się kredytami gotówkowymi, kartami oraz rachunkami. W razie konieczności pomagałem w sprawach technicznych związanych z bankowością internetową."
+                                                },
+                                                "stefczykFinance": {
+                                                            "name": "Stefczyk Finanse",
+                                                            "position": "Doradca klienta",
+                                                            "description": "Zajmowałem się sprzedażą produktów kredytowych oraz oszczędnościowych. Porządkowałem oraz archiwizowałem dokumenty klientów. Pomagałem kasjerom w razie problemów systemowych. Przez większość współpracy byłem również odpowiedzialny za pracę oddziału. Delegowałem zadania i weryfikowałem ich realizację"
+                                                },
+                                                "ingBankSlaski": {
+                                                            "name": "ING Bank Śląski",
+                                                            "position": "Doradca klienta",
+                                                            "description": "Byłem odpowiedzialny za obługę klientów banku. Zajmowałem się bardzo szerokim wachlarzem produktów. Zajmowałem się sprawami kredytowymi dla klientów indywidualnych oraz działalności gospodarczych, kredytami hipotecznymi w początkowej fazie wnioskowania, funduszami inwestycyjnymi, leasingami oraz ubezpieczeniami. Byłem odpowiedzialny przede wszystkim za realizację planów jakościowych - tzn satyusfakcję klienta."
+                                                },
+                                                "openFinance": {
+                                                            "name": "Open Finance",
+                                                            "position": "Internetowy doradca finansowy",
+                                                            "description": "Kontaktowałem się telefonicznie z klientami Open Finance oraz później Getin Bank. Zakładałem lokaty oraz konta osoboste. Moja praca odbywała się poprzez korespondecję mailową oraz kontakt telefoniczny. Byłem odpowiedzialny za pomoc swoim klientom. "
+                                                }
+                                    }
+
+                        }
+            },
+            "projectsPage": {
+                        "pl": {
+                                    "title": "Projekty",
+                                    "stacks": {
+                                                "html": "html",
+                                                "css": "css",
+                                                "sass": "sass",
+                                                "react": "react",
+                                                "js": "javascript",
+                                                "nodeExpress": "node + express",
+                                                "rwd": "rwd",
+                                                "fetch": "fetch",
+                                                "pouchDB": "pouchDB",
+                                                "jwtToken": "JWT tokens",
+                                                "postgresql": "PostgreSQL"
+                                    },
+                                    "projects": {
+                                                "shopFront": {
+                                                            "name": "Sklep Frontend",
+                                                            "description": "Był to projekt realizowany w ramach kursu stacjonarnego. Stworzony jest w całości samodzielnie. W początkowej fazie projektu mieliśmy zbudować front sklemu w oparciu na html, sass oraz javascript bez żadnych frameworków. Maiło to nam pokazać w późniejszym etapie ile problemów rozwiązuje biblioteka React. Obsłużyłem w projekcie logowanie się za pomocą tokenów, oraz podstawowe zapytania do backendu. (nie dokończyłem obsługi statusu transakcji, podgląd realizacji, oraz stylowania strony administratora). Długie otwieranie się sklepu wynika z korzystania z darmowej wersji hostuingu Heroku(aplikacje jest w trybie zamrożenia na początku).",
+                                                            "linkGitHub": "https://github.com/KrzysztofZiemski/shop-frontend",
+                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+
+                                                },
+                                                "shopBack": {
+                                                            "name": "Sklep Backend",
+                                                            "description": "Projekt był kolejnym etapem projketu. Stworzony jest w całości samodzielnie. Dobudowałem do projketku sklepu backend napisany w Node.js. Projekt miał obsługiwać podstawowe zapytania fetch oraz zapisywać dane w bazie danych pouchDB. Rozbudowałem tą koncepcję o logowanie, dzięki czemu miałem możliwość stworzyć podstronę administratora. Projekt nie został przeze mnie dokończony z uwagi na brak czasu(nie dokończyłem obsługi statusu transakcji oraz cięcia zdjęć, które dodaje administrator do dodawanych produktów). Długie otwieranie się sklepu wynika z korzystania z darmowej wersji hostuingu Heroku(aplikacje jest w trybie zamrożenia na początku).",
+                                                            "linkGitHub": "https://github.com/krzysztofZiemski/shop-backend",
+                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+
+                                                },
+                                                "bookMates": {
+                                                            "name": "BookMates",
+                                                            "description": "Projekt realizowany grupowo. Członkowie projektu byli wybierani losowo. Temat projektu mieliśmy wybrać sami. Projekt jest zbudowany przy użyciu React i Node.js. Miał nam pokazać jakie problemy pojawią się w komunikacji grupy. Do komunikacji wykorzystaliśmy aplikację Slack oraz stronę trello.com. Jako, że z założenia każdy członek grupy miał miec styczność z programowaniem na frontendzie i backendzie, rozdzieliliśmy zadania według widoków dla użytkownika. Jako lider grupy stworzyłem pierwszy zarys projektu oraz podstawową strukturę plików. Dodałem również logowanie oraz rejestrację użytkowników. W projekcie użyliśmy bazy danych postGres SQL. Następnie stworzyłem podstronę użytkownika z widokiem, oraz poprawiłem stronę biblioteczki. Stworzyłem obługę dodawania użytkowników do znajomych oraz stworzyłem algorytm sugestii znajomych",
+                                                            "linkGitHub": "https://github.com/KrzysztofZiemski/bookmates",
+                                                            "linkLive": "http://indyanin.myqnapcloud.com/bookmates/#/"
+
+                                                },
+                                                "card": {
+                                                            "name": "Wizytówka",
+                                                            "description": "Strona przedstawiająca moją osobę i postępy w nauce. Gromadzi w jednym miejscu wszystkie niezbędne informację. Miała z założenia być prostą internetową. Użyte technologie to html, sass, react",
+                                                            "linkGitHub": "https://github.com/KrzysztofZiemski/card",
+                                                            "linkLive": "https://krzysztofziemski.com"
+                                                }
+                                    }
+
+                        }
+            }
+}

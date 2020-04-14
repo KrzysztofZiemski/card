@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import './MainNavbar.scss';
 import burgerIcon from '../../assets/burger-icon.svg';
 import BurgerButton from '../BurgerButton/BurgerButton';
+import { mainNavbar } from '../../content.json';
 
-const MainNavbar = ({ scrollToRef, pagesRef }) => {
+const MainNavbar = ({ scrollToRef, pagesRef, lang }) => {
+    const content = mainNavbar[lang];
+
     const { homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage } = pagesRef;
 
     let [hideMenu, setHideMenu] = useState(true);
@@ -15,16 +18,18 @@ const MainNavbar = ({ scrollToRef, pagesRef }) => {
                 <li className='mainNavbar-listElement mainNavbar-listElement-burger'>
                     <BurgerButton onClick={() => setHideMenu(!hideMenu)}><img src={burgerIcon} alt="menu-icon" /></BurgerButton>
                 </li>
-                <li className='mainNavbar-listElement hide'><Link to='/' onClick={() => scrollToRef(homePageRef)}>Home</Link></li>
-                <li className='mainNavbar-listElement hide'><Link to='/about' onClick={() => scrollToRef(aboutPageRef)}>O mnie</Link></li>
-                <li className='mainNavbar-listElement hide'><Link to='/courses' onClick={() => scrollToRef(coursesPage)}>Kursy</Link></li>
-                <li className='mainNavbar-listElement hide'><Link to='/jobs' onClick={() => scrollToRef(experiencePageRef)}>Historia zatrudnienia</Link></li>
-                <li className='mainNavbar-listElement'><Link to='/projects' onClick={() => scrollToRef(projectPageRef)}>Projekty</Link></li>
+                <li className='mainNavbar-listElement hide'><Link to='/' onClick={() => scrollToRef(homePageRef)}>{content.homeLink}</Link></li>
+                <li className='mainNavbar-listElement hide'><Link to='/about' onClick={() => scrollToRef(aboutPageRef)}>{content.aboutLink}</Link></li>
+                <li className='mainNavbar-listElement hide'><Link to='/courses' onClick={() => scrollToRef(coursesPage)}>{content.coursesLink}</Link></li>
+                <li className='mainNavbar-listElement hide'><Link to='/jobs' onClick={() => scrollToRef(experiencePageRef)}>{content.jobsLink}</Link></li>
+                <li className='mainNavbar-listElement'><Link to='/projects' onClick={() => scrollToRef(projectPageRef)}>{content.projectsLink}</Link></li>
             </ul>
             <ul className={hideMenu ? 'slideNavbar hide' : 'slideNavbar'}>
-                <li className='slideNavbar-listElement'><Link to='/' onClick={() => { scrollToRef(homePageRef); setHideMenu(!hideMenu) }}>Home</Link></li>
-                <li className='slideNavbar-listElement'><Link to='/about' onClick={() => { scrollToRef(aboutPageRef); setHideMenu(!hideMenu) }}>O mnie</Link></li>
-                <li className='slideNavbar-listElement'><Link to='/projects' onClick={() => { scrollToRef(projectPageRef); setHideMenu(!hideMenu) }}>Projekty</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/' onClick={() => { scrollToRef(homePageRef); setHideMenu(!hideMenu) }}>{content.homeLink}</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/about' onClick={() => { scrollToRef(aboutPageRef); setHideMenu(!hideMenu) }}>{content.aboutLink}</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/projects' onClick={() => { scrollToRef(projectPageRef); setHideMenu(!hideMenu) }}>{content.projectsLink}</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/courses' onClick={() => { scrollToRef(coursesPage); setHideMenu(!hideMenu) }}>{content.coursesLink}</Link></li>
+                <li className='slideNavbar-listElement'><Link to='/jobs' onClick={() => { scrollToRef(experiencePageRef); setHideMenu(!hideMenu) }}>{content.jobsLink}</Link></li>
             </ul>
         </nav >
     )
