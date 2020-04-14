@@ -180,14 +180,14 @@
                                                             "name": "Shop Frontend",
                                                             "description": "It was a project implemented as part of the stationary course. It is created entirely by itself. In the initial phase of the project we were to build a sklem front based on html, sass and javascript without any frameworks. This was to show us at a later stage how many problems the React library solves. I handled logging in using tokens and basic backend queries in the project. (I have not completed the transaction status support, implementation preview, and styling the admin page). The long opening of the store results from using the free version of Heroku hosting (applications are in freeze mode at the beginning).",
                                                             "linkGitHub": "https://github.com/KrzysztofZiemski/shop-frontend",
-                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+                                                            "linkLive": "http://shop.krzysztofziemski.com/"
 
                                                 },
                                                 "shopBack": {
                                                             "name": "Shop Backend",
                                                             "description": "The project was the next stage of the project. It was created entirely by myself. I added a backend to the store project written in Node.js. The project was to handle basic fetch queries and save data in the pouchDB database. I developed this concept by logging in, which allowed me to create a subpage The project was not completed by me due to the lack of time (I did not finish the transaction status support and photo cutting, which the administrator adds to the added products.) The long opening of the store results from the use of the free version of Heroku hosting (applications are in freeze mode on beginning).",
                                                             "linkGitHub": "https://github.com/krzysztofZiemski/shop-backend",
-                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+                                                            "linkLive": "http://shop.krzysztofziemski.com/"
 
                                                 },
                                                 "bookMates": {
