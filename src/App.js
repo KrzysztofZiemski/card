@@ -7,13 +7,13 @@ import AboutPage from './templates/AboutPage/AboutPage';
 import ProjectsPage from './templates/ProjectsPage/ProjectsPage';
 import CoursesPage from './templates/CoursesPage/CoursesPage';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { langAvaible } from './content.json';
 
 import './App.scss';
 //npm install react-animate-on-scroll --save
-const languages = ['pl', 'en'];
 
 function App() {
-  let [lang, setLang] = useState(languages[0]);
+  let [lang, setLang] = useState(langAvaible.pl);
   const scrollToRef = (ref) => {
     for (let i = 1; i <= ref.current.offsetTop; i++) {
       setTimeout(() => {
@@ -32,7 +32,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App__mainNav">
-          <MainNavbar scrollToRef={scrollToRef} lang={lang} pagesRef={{ homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage }} />
+          <MainNavbar scrollToRef={scrollToRef} lang={lang} pagesRef={{ homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage }} setLang={setLang} />
         </header>
         <Switch>
           <Route path='/' >

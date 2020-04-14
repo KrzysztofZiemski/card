@@ -11,7 +11,7 @@ const AboutPage = ({ lang }) => {
             const skills = content.skills.map((skill, index) => <div className='skillsContainer' key={skill + index}> <StackElement className='skillsContainer__element'>{skill}</StackElement></div>)
             return (
                         <div className="aboutPage">
-                                    <h1 className='aboutPage__header'>O mnie</h1>
+                                    <h1 className='aboutPage__header'>{content.title}</h1>
                                     <div className='aboutPage__content'>
                                                 <article className='description'>
                                                             {descriptionParagraph}

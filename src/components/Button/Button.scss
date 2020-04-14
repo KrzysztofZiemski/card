@@ -1,3 +1,5 @@
+@import '../../sass/colors.scss';
+
 .bassicButton {
             padding: 10px 15px;
             background-color: #0062cc;
@@ -8,7 +10,7 @@
 
             &:hover {
                         background-color: #fff;
-                        color: #0062cc;
+                        color: $blue;
                         border: 3px solid #0062cc;
             }
 }

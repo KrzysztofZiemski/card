@@ -1,8 +1,17 @@
 {
+            "langAvaible": {
+                        "pl": "pl",
+                        "en": "en"
+            },
             "homePage": {
                         "pl": {
                                     "downloadButton": "Pobierz CV",
                                     "name": "Krzysztof Ziemski",
+                                    "wonnaBe": ["Junior front-End Developer", "Trainee front-End Developer"]
+                        },
+                        "en": {
+                                    "downloadButton": "Download CV",
+                                    "name": "Christopher Ziemski",
                                     "wonnaBe": ["Junior front-End Developer", "Trainee front-End Developer"]
                         }
             },
@@ -13,12 +22,24 @@
                                     "coursesLink": "Kursy",
                                     "jobsLink": "Historia zatrudnienia",
                                     "projectsLink": "Projekty"
+                        },
+                        "en": {
+                                    "homeLink": "Start",
+                                    "aboutLink": "About me",
+                                    "coursesLink": "Courses",
+                                    "jobsLink": "Employment history",
+                                    "projectsLink": "Projects"
                         }
             },
             "aboutPage": {
                         "pl": {
                                     "title": "O mnie",
-                                    "descriptionParagraph": ["Nazywam się Krzysztof Ziemski.", "Jestem po trzydziestce (jeżeli chodzi o wiek).", "Ze względu na własne wartości, postanowiłem opuścić aktualną branżę - bankowość. Dzięki temu zająłem się tym co od dawna mnie ciekawi", "Uczę się zagadnień związanych web developmentem od jesieni 2018 roku. Nauka jest dla mnie przyjemnością, poszukuje jednak możliwości zatrudnienia, aby przyspieszyć ten proces.", "Jestem ambitną osobą, która nie narzeka na nudę. Zawsze umiałem zagospodarować swój czas - czy to ucząc się gry na gitarze, czy przebywając dziesiątki kilometrów biegając po parkach.", "Cechuję mnie wysoka determinacja, która pomagała mi zawsze w życiu osobistym i zawodowym.", "Opanowałem część potrzebnych umiejętności na stanowisku web developera."],
+                                    "descriptionParagraph": ["Nazywam się Krzysztof Ziemski.", "Jestem po trzydziestce (jeżeli chodzi o wiek).", "Ze względu na własne wartości, postanowiłem opuścić aktualną branżę - bankowość. Dzięki temu zająłem się na poważnie tym co od dawna mnie ciekawi", "Uczę się zagadnień związanych web developmentem od jesieni 2018 roku. Nauka jest dla mnie przyjemnością, poszukuje jednak możliwości zatrudnienia, aby przyspieszyć ten proces.", "Jestem ambitną osobą, która nie narzeka na nudę. Zawsze umiałem zagospodarować swój czas - czy to ucząc się gry na gitarze, czy przebywając dziesiątki kilometrów biegając po parkach.", "Cechuję mnie wysoka determinacja, która pomagała mi zawsze w życiu osobistym i zawodowym.", "Opanowałem część potrzebnych umiejętności na stanowisku web developera."],
+                                    "skills": ["css", "html", "javascript", "react", "rwd", "git", "sass", "npm", "node"]
+                        },
+                        "en": {
+                                    "title": "About me",
+                                    "descriptionParagraph": ["My name is Christopher Ziemski.", "I'm over thirty years old.", "Due to my own values, i decided to leave the current industry - banking. Thanks to that i took seriously what has long been interesting for me", "I have been studying web development issues since the end of 2018. Learning is a pleasure for me, but i'm looking for employment to accelerate it.", "I'm an ambitious person who doesn't complain of boredom. I have always been able to manage my time - learning to play guitar, run tens of kilometers ", "I am characterized by high determination, which has always helped me in personal and professional life.", "I learned some of the skills needed as a web developer."],
                                     "skills": ["css", "html", "javascript", "react", "rwd", "git", "sass", "npm", "node"]
                         }
             },
@@ -26,9 +47,16 @@
                         "pl": {
                                     "title": "Kursy",
                                     "stationaryNameList": "Kurs stacjonarny",
-                                    "webNameList": "Kurs stacjonarny",
+                                    "webNameList": "Kurs internetowy",
                                     "stationaryCourses": ["Bootcamp organizowany przez c_school Full stack - React developer 10/2019 - 03/2020"],
                                     "webCourses": ["Udemy kurs \"Web Deweloper od podstaw \"", "Udemy kurs \"Front - end zaawansowany\"", "Udemy kurs \"Programowanie javascript \"", "Udemy kurs \"React od podstaw\"", "Udemy kurs \"Node.js Express i MongoDB \""]
+                        },
+                        "en": {
+                                    "title": "Courses",
+                                    "stationaryNameList": "Stationary courses",
+                                    "webNameList": "Web courses",
+                                    "stationaryCourses": ["Bootcamp organized by c_school Full stack - React developer 10/2019 - 03/2020"],
+                                    "webCourses": ["Udemy course \"Web Deweloper od podstaw \"(Web Developer from scratch)", "Udemy course \"Front - end zaawansowany\"(Advanced front - end)", "Udemy course \"Programowanie javascript \"(JavaScript programming)", "Udemy course \"React od podstaw\"(React from scratch)", "Udemy course \"Node.js Express i MongoDB \"(Node.js Express and MongoDB)"]
                         }
             },
             "experiencePage": {
@@ -54,6 +82,32 @@
                                                             "name": "Open Finance",
                                                             "position": "Internetowy doradca finansowy",
                                                             "description": "Kontaktowałem się telefonicznie z klientami Open Finance oraz później Getin Bank. Zakładałem lokaty oraz konta osoboste. Moja praca odbywała się poprzez korespondecję mailową oraz kontakt telefoniczny. Byłem odpowiedzialny za pomoc swoim klientom. "
+                                                }
+                                    }
+
+                        },
+                        "en": {
+                                    "title": "Employment history",
+                                    "companies": {
+                                                "creditAgricole": {
+                                                            "name": "Credit Agricole",
+                                                            "position": "Customer advisor",
+                                                            "description": "I was responsible for the day-to-day service of the bank's clients and I arranged meetings with clients to present the bank's current offer. I dealt with cash loans, cards and bills. If necessary, I assisted in technical matters related to online banking."
+                                                },
+                                                "stefczykFinance": {
+                                                            "name": "Stefczyk Finanse",
+                                                            "position": "Customer advisor",
+                                                            "description": "I dealt with the sale of credit and savings products. I organized and archived customer documents. I helped cashiers in case of system problems. For most of the cooperation, I was also responsible for the department's work. I delegated tasks and verified their implementation"
+                                                },
+                                                "ingBankSlaski": {
+                                                            "name": "ING Bank Śląski",
+                                                            "position": "Customer advisor",
+                                                            "description": "I was responsible for servicing the bank's clients. I dealt with a very wide range of products. I dealt with credit matters for individual clients and business activities, mortgage loans in the initial application phase, investment funds, leasing and insurance. I was responsible primarily for the implementation of quality plans - i.e. client satiation."
+                                                },
+                                                "openFinance": {
+                                                            "name": "Open Finance",
+                                                            "position": "Online financial advisor",
+                                                            "description": "I contacted clients by Open Finance and later Getin Bank. I set up deposits and personal accounts. My work was done via e-mail correspondence and telephone contact. I was responsible for helping my clients."
                                                 }
                                     }
 
@@ -105,6 +159,51 @@
                                                 }
                                     }
 
+                        },
+                        "en": {
+                                    "title": "Projects",
+                                    "stacks": {
+                                                "html": "html",
+                                                "css": "css",
+                                                "sass": "sass",
+                                                "react": "react",
+                                                "js": "javascript",
+                                                "nodeExpress": "node + express",
+                                                "rwd": "rwd",
+                                                "fetch": "fetch",
+                                                "pouchDB": "pouchDB",
+                                                "jwtToken": "JWT tokens",
+                                                "postgresql": "PostgreSQL"
+                                    },
+                                    "projects": {
+                                                "shopFront": {
+                                                            "name": "Shop Frontend",
+                                                            "description": "It was a project implemented as part of the stationary course. It is created entirely by itself. In the initial phase of the project we were to build a sklem front based on html, sass and javascript without any frameworks. This was to show us at a later stage how many problems the React library solves. I handled logging in using tokens and basic backend queries in the project. (I have not completed the transaction status support, implementation preview, and styling the admin page). The long opening of the store results from using the free version of Heroku hosting (applications are in freeze mode at the beginning).",
+                                                            "linkGitHub": "https://github.com/KrzysztofZiemski/shop-frontend",
+                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+
+                                                },
+                                                "shopBack": {
+                                                            "name": "Shop Backend",
+                                                            "description": "The project was the next stage of the project. It was created entirely by myself. I added a backend to the store project written in Node.js. The project was to handle basic fetch queries and save data in the pouchDB database. I developed this concept by logging in, which allowed me to create a subpage The project was not completed by me due to the lack of time (I did not finish the transaction status support and photo cutting, which the administrator adds to the added products.) The long opening of the store results from the use of the free version of Heroku hosting (applications are in freeze mode on beginning).",
+                                                            "linkGitHub": "https://github.com/krzysztofZiemski/shop-backend",
+                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+
+                                                },
+                                                "bookMates": {
+                                                            "name": "BookMates",
+                                                            "description": "A group project. Project members were randomly selected. We had to choose the subject of the project ourselves. The project is built using React and Node.js. He was to show us what problems will arise in the communication of the group. For communication we used the Slack application and trello.com website. As each member of the group was supposed to have contact with programming on the frontend and backend, we separated the tasks according to the user views. As a group leader, I created the first project outline and the basic file structure. I have also added login and user registration. We used the postGres SQL database in the project. Then I created a user subpage with a view, and improved the bookcase page. I created the service of adding users to friends and created an algorithm of friend suggestions",
+                                                            "linkGitHub": "https://github.com/KrzysztofZiemski/bookmates",
+                                                            "linkLive": "http://indyanin.myqnapcloud.com/bookmates/#/"
+
+                                                },
+                                                "card": {
+                                                            "name": "Card",
+                                                            "description": "A page depicting me and my academic progress. It gathers all necessary information in one place. It was supposed to be a simple website. The technologies used: html, sass, react.",
+                                                            "linkGitHub": "https://github.com/KrzysztofZiemski/card",
+                                                            "linkLive": "https://krzysztofziemski.com"
+                                                }
+                                    }
                         }
             }
 }

@@ -2,81 +2,168 @@
 @import "../../sass/variables.scss";
 @import "../../sass/mixins.scss";
 
-.mainNavbar {
-  @include reset-list;
-  position: absolute;
-  display: flex;
-  top: 0;
-  padding-top: 20px;
-  padding-left: 20px;
-  font-size: 15px;
-  z-index: 100;
+.mainNavContainer {
+  position: relative;
+  z-index: 1;
 
-  .mainNavbar-listElement {
-    padding: 3px;
-    margin: 0 3px;
+  .lang {
+    position: absolute;
+    top: 5px;
+    right: 5px;
     display: flex;
-    align-items: center;
+    width: 40px;
+    height: 20px;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+    font-size: 10px;
 
-    &.hide {
-      display: none;
+    @include rwd(small) {
+      width: 50px;
+      height: 25px;
+      font-size: 11px;
     }
 
     @include rwd(tablet) {
-      &.hide {
-        display: flex;
-      }
+      width: 50px;
+      height: 25px;
+      font-size: 14px;
     }
 
-
-    &>a {
+    select {
+      outline: 0;
+      appearance: none;
+      box-shadow: none;
+      border: 0;
+      background: $grey;
+      background-image: none;
+      color: $grey;
+      flex: 1;
+      padding: 0 .5em;
       color: $text-main;
-      font-family: $linkFont;
-      text-decoration: none;
       cursor: pointer;
-    }
+      text-transform: uppercase;
 
-    &.mainNavbar-listElement-burger {
-      @include rwd(tablet) {
+      option {
+        text-transform: uppercase;
+      }
+
+      //for ie arrow
+      &::-ms-expand {
         display: none;
       }
     }
 
-  }
-}
-
-.slideNavbar {
-  @include reset-list;
-  position: absolute;
-  left: 0;
-  top: calc(var(--navHeight) - 150px);
-  height: 100%;
-  min-width: var(--asideNavWidth);
-  display: flex;
-  flex-direction: column;
-  padding: 13px;
-  transition: .3s;
-  background-color: white;
-  z-index: 100;
-
-  @include rwd(tablet) {
-    display: none;
-  }
-
-  &.hide {
-    left: -200px;
-    transition: .3s;
-  }
-
-  .slideNavbar-listElement {
-    margin: 10px 0;
-
-    &>a {
+    &::after {
+      content: '\25BC';
       display: block;
-      padding: 3px 6px;
-      color: $text-main;
-      text-decoration: none;
-      font-family: $linkFont;
+      position: absolute;
+      top: calc(50% - 3px);
+      right: 0;
+      height: 100%;
+      transform: translateY(-50%);
+      padding-right: 5px;
+      background: $grey;
+      cursor: pointer;
+      pointer-events: none;
+      transition: .25s all ease;
+
+      @include rwd(small) {
+        top: calc(50% - 4px);
+      }
+
+      @include rwd(tablet) {
+        top: calc(50% - 7px);
+      }
+
+
+    }
+
+    &:hover {
+      select {
+        &::after {
+          color: #f39c12;
+        }
+      }
+    }
+  }
+
+  .mainNavbar {
+    @include reset-list;
+    position: absolute;
+    display: flex;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    z-index: 100;
+
+    .mainNavbar__listElement {
+      padding: 3px;
+      margin: 0 3px;
+      display: flex;
+      align-items: center;
+
+      &.hide {
+        display: none;
+      }
+
+      @include rwd(tablet) {
+        &.hide {
+          display: flex;
+        }
+      }
+
+
+      &>a {
+        color: $text-main;
+        font-family: $linkFont;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      &.mainNavbar__listElement--burger {
+        @include rwd(tablet) {
+          display: none;
+        }
+      }
+
+    }
+  }
+
+  .slideNavbar {
+    @include reset-list;
+    position: absolute;
+    left: 0;
+    top: calc(var(--navHeight) - 150px);
+    height: 100%;
+    min-width: var(--asideNavWidth);
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    transition: .3s;
+    background-color: white;
+    z-index: 100;
+
+    @include rwd(tablet) {
+      display: none;
+    }
+
+    &.hide {
+      left: -200px;
+      transition: .3s;
+    }
+
+    .slideNavbar__listElement {
+      margin: 10px 0;
+
+      &>a {
+        display: block;
+        padding: 3px 6px;
+        color: $text-main;
+        text-decoration: none;
+        font-family: $linkFont;
+      }
     }
   }
 }
