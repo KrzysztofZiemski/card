@@ -134,14 +134,14 @@
                                                             "name": "Sklep Frontend",
                                                             "description": "Był to projekt realizowany w ramach kursu stacjonarnego. Stworzony jest w całości samodzielnie. W początkowej fazie projektu mieliśmy zbudować front sklemu w oparciu na html, sass oraz javascript bez żadnych frameworków. Maiło to nam pokazać w późniejszym etapie ile problemów rozwiązuje biblioteka React. Obsłużyłem w projekcie logowanie się za pomocą tokenów, oraz podstawowe zapytania do backendu. (nie dokończyłem obsługi statusu transakcji, podgląd realizacji, oraz stylowania strony administratora). Długie otwieranie się sklepu wynika z korzystania z darmowej wersji hostuingu Heroku(aplikacje jest w trybie zamrożenia na początku).",
                                                             "linkGitHub": "https://github.com/KrzysztofZiemski/shop-frontend",
-                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+                                                            "linkLive": "http://shop.krzysztofziemski.com/"
 
                                                 },
                                                 "shopBack": {
                                                             "name": "Sklep Backend",
                                                             "description": "Projekt był kolejnym etapem projketu. Stworzony jest w całości samodzielnie. Dobudowałem do projketku sklepu backend napisany w Node.js. Projekt miał obsługiwać podstawowe zapytania fetch oraz zapisywać dane w bazie danych pouchDB. Rozbudowałem tą koncepcję o logowanie, dzięki czemu miałem możliwość stworzyć podstronę administratora. Projekt nie został przeze mnie dokończony z uwagi na brak czasu(nie dokończyłem obsługi statusu transakcji oraz cięcia zdjęć, które dodaje administrator do dodawanych produktów). Długie otwieranie się sklepu wynika z korzystania z darmowej wersji hostuingu Heroku(aplikacje jest w trybie zamrożenia na początku).",
                                                             "linkGitHub": "https://github.com/krzysztofZiemski/shop-backend",
-                                                            "linkLive": "https://fathomless-plateau-87579.herokuapp.com/"
+                                                            "linkLive": "http://shop.krzysztofziemski.com/"
 
                                                 },
                                                 "bookMates": {
