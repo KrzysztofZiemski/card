@@ -3,90 +3,8 @@
 @import "../../sass/mixins.scss";
 
 .mainNavContainer {
-  position: relative;
+  position: fixed;
   z-index: 1;
-
-  .lang {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    display: flex;
-    width: 40px;
-    height: 20px;
-    line-height: 3;
-    overflow: hidden;
-    border-radius: .25em;
-    font-size: 10px;
-
-    @include rwd(small) {
-      width: 50px;
-      height: 25px;
-      font-size: 11px;
-    }
-
-    @include rwd(tablet) {
-      width: 50px;
-      height: 25px;
-      font-size: 14px;
-    }
-
-    select {
-      outline: 0;
-      appearance: none;
-      box-shadow: none;
-      border: 0;
-      background: $grey;
-      background-image: none;
-      color: $grey;
-      flex: 1;
-      padding: 0 .5em;
-      color: $text-main;
-      cursor: pointer;
-      text-transform: uppercase;
-
-      option {
-        text-transform: uppercase;
-      }
-
-      //for ie arrow
-      &::-ms-expand {
-        display: none;
-      }
-    }
-
-    &::after {
-      content: '\25BC';
-      display: block;
-      position: absolute;
-      top: calc(50% - 3px);
-      right: 0;
-      height: 100%;
-      transform: translateY(-50%);
-      padding-right: 5px;
-      background: $grey;
-      cursor: pointer;
-      pointer-events: none;
-      transition: .25s all ease;
-
-      @include rwd(small) {
-        top: calc(50% - 4px);
-      }
-
-      @include rwd(tablet) {
-        top: calc(50% - 7px);
-      }
-
-
-    }
-
-    &:hover {
-      select {
-        &::after {
-          color: #f39c12;
-        }
-      }
-    }
-  }
 
   .mainNavbar {
     @include reset-list;
@@ -136,13 +54,11 @@
     position: absolute;
     left: 0;
     top: calc(var(--navHeight) - 150px);
-    height: 100%;
     min-width: var(--asideNavWidth);
     display: flex;
     flex-direction: column;
     padding: 13px;
     transition: .3s;
-    background-color: white;
     z-index: 100;
 
     @include rwd(tablet) {

@@ -4,16 +4,13 @@ import './MainNavbar.scss';
 import burgerIcon from '../../assets/burger-icon.svg';
 import BurgerButton from '../BurgerButton/BurgerButton';
 import { mainNavbar } from '../../content.json';
-import { langAvaible } from '../../content.json';
-const MainNavbar = ({ scrollToRef, pagesRef, lang, setLang }) => {
+
+const MainNavbar = ({ scrollToRef, pagesRef, lang }) => {
     const content = mainNavbar[lang];
     const { homePageRef, aboutPageRef, projectPageRef, experiencePageRef, coursesPage } = pagesRef;
 
     let [hideMenu, setHideMenu] = useState(true);
 
-    const changLanguage = (e) => {
-        setLang(e.target.value)
-    }
     return (
         <nav className='mainNavContainer'>
             <ul className="mainNavbar">
@@ -33,13 +30,6 @@ const MainNavbar = ({ scrollToRef, pagesRef, lang, setLang }) => {
                 <li className='slideNavbar__listElement'><Link to='/courses' onClick={() => { scrollToRef(coursesPage); setHideMenu(!hideMenu) }}>{content.coursesLink}</Link></li>
                 <li className='slideNavbar__listElement'><Link to='/jobs' onClick={() => { scrollToRef(experiencePageRef); setHideMenu(!hideMenu) }}>{content.jobsLink}</Link></li>
             </ul>
-            <div className="lang">
-                {/* <span className='arrowSelect'> <img src={selectArrowIcon} alt="arrow" /></span> */}
-                <select onChange={changLanguage} value={lang}>
-                    <option value={langAvaible.pl}>{langAvaible.pl}</option>
-                    <option value={langAvaible.en}>{langAvaible.en}</option>
-                </select>
-            </div>
         </nav >
     )
 };
