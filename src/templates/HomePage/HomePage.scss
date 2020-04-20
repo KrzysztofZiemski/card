@@ -5,6 +5,7 @@
 .homePage {
     display: flex;
     height: 100vh;
+    background-color: $white;
 
     .homePage-aside {
         width: var(--asideBlank);
@@ -17,7 +18,7 @@
         }
 
         &::after {
-            background-color: $grey;
+            background-color: $white;
             height: 53%;
             content: '';
             display: block;
@@ -96,8 +97,10 @@
                         }
 
                         button {
+                            position: relative;
                             width: 100%;
                             height: var(--asideNavLastElement);
+                            z-index: 2;
 
                             @include rwd(desctop) {
                                 font-size: 1.7rem;
@@ -188,6 +191,7 @@
                     font-size: 1rem;
                     font-weight: bold;
                     font-family: $headersFont;
+                    min-height: 100px;
 
                     @include rwd(small) {
                         font-size: 1.3rem;

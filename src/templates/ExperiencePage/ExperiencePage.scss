@@ -5,6 +5,7 @@
 .experience {
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             position: relative;
             margin-top: -1px;
@@ -20,8 +21,8 @@
             .experience__header {
                         @include titlePage;
                         width: 100%;
-                        flex: auto;
             }
+
 
             .job {
                         display: flex;
@@ -29,7 +30,7 @@
                         width: 100%;
                         margin: 10px auto;
                         padding: 10px;
-                        background-color: #fff;
+                        background-color: $white;
                         border: 3px solid orange;
                         align-items: center;
 
@@ -129,7 +130,7 @@
 
             @include rwd(desctop) {
                         margin: 0px 40%;
-                        padding: 0;
+                        padding: 10px;
                         width: 20%;
             }
 }

@@ -7,12 +7,12 @@
                         "pl": {
                                     "downloadButton": "Pobierz CV",
                                     "name": "Krzysztof Ziemski",
-                                    "wonnaBe": ["Junior front-End Developer", "Trainee front-End Developer"]
+                                    "wonnaBe": ["Junior", "Trainee Front-End Developer"]
                         },
                         "en": {
                                     "downloadButton": "Download CV",
-                                    "name": "Christopher Ziemski",
-                                    "wonnaBe": ["Junior front-End Developer", "Trainee front-End Developer"]
+                                    "name": "Krzysztof Ziemski",
+                                    "wonnaBe": ["Junior", "Trainee Front-End Developer"]
                         }
             },
             "mainNavbar": {
@@ -34,12 +34,12 @@
             "aboutPage": {
                         "pl": {
                                     "title": "O mnie",
-                                    "descriptionParagraph": ["Nazywam się Krzysztof Ziemski.", "Jestem po trzydziestce (jeżeli chodzi o wiek).", "Ze względu na własne wartości, postanowiłem opuścić aktualną branżę - bankowość. Dzięki temu zająłem się na poważnie tym co od dawna mnie ciekawi", "Uczę się zagadnień związanych web developmentem od jesieni 2018 roku. Nauka jest dla mnie przyjemnością, poszukuje jednak możliwości zatrudnienia, aby przyspieszyć ten proces.", "Jestem ambitną osobą, która nie narzeka na nudę. Zawsze umiałem zagospodarować swój czas - czy to ucząc się gry na gitarze, czy przebywając dziesiątki kilometrów biegając po parkach.", "Cechuję mnie wysoka determinacja, która pomagała mi zawsze w życiu osobistym i zawodowym.", "Opanowałem część potrzebnych umiejętności na stanowisku web developera."],
+                                    "descriptionParagraph": ["Nazywam się Krzysztof Ziemski.", "Jestem po trzydziestce.", "Ze względu na własne wartości, postanowiłem opuścić aktualną branżę - bankowość. Dzięki temu zająłem się na poważnie tym co od dawna mnie ciekawi.", "Uczę się zagadnień związanych web developmentem od jesieni 2018 roku. Nauka jest dla mnie przyjemnością, poszukuje jednak możliwości zatrudnienia, aby przyspieszyć ten proces.", "Jestem ambitną osobą, która nie narzeka na nudę. Zawsze umiałem zagospodarować swój czas - czy to ucząc się gry na gitarze, czy przebywając dziesiątki kilometrów biegając po parkach.", "Cechuję mnie wysoka determinacja, która pomagała mi zawsze w życiu osobistym i zawodowym.", "Opanowałem część potrzebnych umiejętności na stanowisku web developera."],
                                     "skills": ["css", "html", "javascript", "react", "rwd", "git", "sass", "npm", "node"]
                         },
                         "en": {
                                     "title": "About me",
-                                    "descriptionParagraph": ["My name is Christopher Ziemski.", "I'm over thirty years old.", "Due to my own values, i decided to leave the current industry - banking. Thanks to that i took seriously what has long been interesting for me", "I have been studying web development issues since the end of 2018. Learning is a pleasure for me, but i'm looking for employment to accelerate it.", "I'm an ambitious person who doesn't complain of boredom. I have always been able to manage my time - learning to play guitar, run tens of kilometers ", "I am characterized by high determination, which has always helped me in personal and professional life.", "I learned some of the skills needed as a web developer."],
+                                    "descriptionParagraph": ["My name is Krzysztof Ziemski.", "I'm over thirty years old.", "Due to my own values, i decided to leave the current industry - banking. Thanks to that i took seriously what has long been interesting for me.", "I have been studying web development issues since the end of 2018. Learning is a pleasure for me, but i'm looking for employment to accelerate it.", "I'm an ambitious person who doesn't complain of boredom. I have always been able to manage my time - learning to play guitar, run tens of kilometers.", "I am characterized by high determination, which has always helped me in personal and professional life.", "I learned some of the skills needed as a web developer."],
                                     "skills": ["css", "html", "javascript", "react", "rwd", "git", "sass", "npm", "node"]
                         }
             },
@@ -62,6 +62,8 @@
             "experiencePage": {
                         "pl": {
                                     "title": "Doświadczenie zawodowe",
+                                    "showMore": "czytaj więcej",
+                                    "showLess": "mniej",
                                     "companies": {
                                                 "creditAgricole": {
                                                             "name": "Credit Agricole",
@@ -88,6 +90,8 @@
                         },
                         "en": {
                                     "title": "Employment history",
+                                    "showMore": "read more",
+                                    "showLess": "less",
                                     "companies": {
                                                 "creditAgricole": {
                                                             "name": "Credit Agricole",

@@ -5,7 +5,7 @@
 .aboutPage {
   position: relative;
   display: flex;
-  min-height: 100vh;
+  min-height: 50vh;
   flex-direction: column;
   padding: 20px;
   background: linear-gradient(to bottom,
@@ -22,7 +22,6 @@
   .aboutPage__header {
     width: 100%;
     @include titlePage;
-    flex: auto;
   }
 
   .aboutPage__content {
@@ -44,7 +43,6 @@
       .description__paragraph {
         text-align: left;
         padding-bottom: 10px;
-        color: $white;
         font-family: "Raleway";
         mix-blend-mode: difference;
         z-index: 1;

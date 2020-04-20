@@ -22,21 +22,21 @@ const MainNavbar = ({ pagesRef, lang }) => {
 
     const scrollToRef = (ref) => {
         let distance = ref.current.offsetTop - window.pageYOffset;
-
-        if (distance >= 0) {
-            for (let i = window.pageYOffset; i <= ref.current.offsetTop; i++) {
-                setTimeout(() => {
-                    window.scrollTo(0, i)
-                }, (i + 5) * .2);
-            }
-        } else {
-            for (let i = window.pageYOffset; i >= ref.current.offsetTop; i--) {
-                console.log(i)
-                setTimeout(() => {
-                    window.scrollTo(0, i)
-                }, i * -1);
-            }
-        }
+        window.scrollTo(0, ref.current.offsetTop)
+        // if (distance >= 0) {
+        //     for (let i = window.pageYOffset; i <= ref.current.offsetTop; i++) {
+        //         setTimeout(() => {
+        //             window.scrollTo(0, i)
+        //         }, (i + 5) * .2);
+        //     }
+        // } else {
+        //     for (let i = window.pageYOffset; i >= ref.current.offsetTop; i--) {
+        //         console.log(i)
+        //         setTimeout(() => {
+        //             window.scrollTo(0, i)
+        //         }, i * -1);
+        //     }
+        // }
     };
 
     const getClassesMenu = () => {

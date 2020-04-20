@@ -7,7 +7,6 @@ import AboutPage from './templates/AboutPage/AboutPage';
 import ProjectsPage from './templates/ProjectsPage/ProjectsPage';
 import CoursesPage from './templates/CoursesPage/CoursesPage';
 import SelectLang from './components/SelectLang/SelectLang';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { langAvaible } from './content.json';
 
 import './App.scss';
@@ -37,19 +36,24 @@ function App() {
             <section ref={homePageRef} className='App__page'>
               <HomePage lang={lang} />
             </section>
+
+
             <section ref={aboutPageRef} className='App__page'>
               <AboutPage lang={lang} />
             </section>
+
+
             <section ref={coursesPage} className='App__page'>
               <CoursesPage lang={lang} />
             </section>
+
             <section ref={experiencePageRef} className='App__page'>
               <ExperiencePage lang={lang} />
             </section>
+
             <section ref={projectPageRef} className='App__page'>
               <ProjectsPage lang={lang} />
             </section>
-
           </Route>
         </Switch>
 

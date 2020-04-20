@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './ShowMore.scss';
-
-const ShowMore = ({ limit, readMoreText = 'read more', readLessText = 'read less', children, className = 'text' }) => {
+import { experiencePage } from '../../content.json';
+const ShowMore = ({ limit, children, className = 'text', lang }) => {
             let [showAll, setShowAll] = useState(false)
-
+            const content = experiencePage[lang];
             if (children.length <= limit) return (<div className={className}>{children}</div>);
 
             const wordArr = children.split(' ');
@@ -22,10 +22,10 @@ const ShowMore = ({ limit, readMoreText = 'read more', readLessText = 'read less
             return (
                         <p className={`${className} show-more-less`} onClick={showAll ? () => setShowAll(false) : null}>
                                     <span className='show-more-less__span'>{arrayToShow.join(' ')}
-                                                {!showAll ? <button className='show-more-less__btn' onClick={() => setShowAll(true)}>... {readMoreText}</button> : null}
+                                                {!showAll ? <button className='show-more-less__btn' onClick={() => setShowAll(true)}>... {content.showMore}</button> : null}
                                     </span>
                                     <span className={showAll ? 'show-more-less__span' : 'show-more-less__span show-more-less__span--hide'}>{arrayToHide.join(' ')}
-                                                <button className='show-more-less__btn' onClick={() => setShowAll(false)}>{readLessText}</button>
+                                                <button className='show-more-less__btn' onClick={() => setShowAll(false)}>{content.showLess}</button>
                                     </span>
                         </p>
             )

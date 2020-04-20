@@ -1,0 +1,23 @@
+@import '../../sass/animations.scss';
+
+.machineWritting {
+            position: relative;
+
+            &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: -4px;
+                        height: 100%;
+                        width: 2px;
+                        background-color: black;
+                        animation: writting 1.6s linear infinite;
+            }
+
+            &.hide {
+                        &::after {
+                                    display: none;
+                        }
+            }
+}

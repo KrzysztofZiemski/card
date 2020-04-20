@@ -27,7 +27,7 @@
 
   &.bgc {
     @include rwd(desctop) {
-      background-color: orange;
+      background-color: $orange;
       width: 100%;
     }
   }
@@ -60,7 +60,7 @@
         height: 100%;
         display: block;
         content: '';
-        background-color: $mint;
+        background-color: orange;
         transform: rotate(45deg);
       }
     }
@@ -86,7 +86,7 @@
       &.slideNavbar__listElement--alwaysShow {
         position: absolute;
         top: 15px - $menuPaddingVertical;
-        right: -$widthBurgerBtn - 5px;
+        right: -$widthBurgerBtn - 9px;
         transform: translateX(100%);
 
         @include rwd(desctop) {
@@ -95,7 +95,7 @@
         }
 
         &.bgc {
-          background-color: $mint;
+          background-color: $orange;
           border-radius: 5px;
 
           @include rwd(desctop) {
