@@ -31,7 +31,7 @@
                         margin: 10px auto;
                         padding: 10px;
                         background-color: $white;
-                        border: 3px solid orange;
+                        border: 3px solid $orange;
                         align-items: center;
 
                         @include rwd(small) {

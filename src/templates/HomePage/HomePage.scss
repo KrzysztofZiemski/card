@@ -9,7 +9,7 @@
 
     .homePage-aside {
         width: var(--asideBlank);
-        background-color: orange;
+        background-color: $orange;
 
         &::before {
             content: '';

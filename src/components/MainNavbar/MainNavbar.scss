@@ -9,7 +9,7 @@
   min-width: var(--asideNavWidth);
   height: 100vh;
   transform: translateX(-100%);
-  background-color: #fff;
+  background-color: $white;
   z-index: 2;
   transition: .3s;
   padding-top: 30px;
@@ -60,7 +60,7 @@
         height: 100%;
         display: block;
         content: '';
-        background-color: orange;
+        background-color: $orange;
         transform: rotate(45deg);
       }
     }

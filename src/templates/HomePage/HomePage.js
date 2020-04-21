@@ -2,7 +2,7 @@ import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import githubIcon from '../../assets/github-icon.svg';
-import profile from '../../assets/profile.JPG';
+import profile from '../../assets/profile.png';
 import Button from '../../components/Button/Button';
 import MachineWriting from '../../components/MachineWriting/MachineWriting';
 import CV from '../../assets/CV.pdf';
