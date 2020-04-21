@@ -21,8 +21,10 @@ const MainNavbar = ({ pagesRef, lang }) => {
     }
 
     const scrollToRef = (ref) => {
-        let distance = ref.current.offsetTop - window.pageYOffset;
         window.scrollTo(0, ref.current.offsetTop)
+
+        //TODO    slow scrolling too slow for mobile
+        //let distance = ref.current.offsetTop - window.pageYOffset;
         // if (distance >= 0) {
         //     for (let i = window.pageYOffset; i <= ref.current.offsetTop; i++) {
         //         setTimeout(() => {

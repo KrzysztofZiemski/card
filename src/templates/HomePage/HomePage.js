@@ -15,7 +15,7 @@ const HomePage = ({ lang }) => {
         window.open(CV);
     }
     return (
-        <ScrollAnimation animateIn='fadeIn'>
+        <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
             <div className='homePage'>
                 <div className='homePage-main'>
                     <nav className='asideNav'>
@@ -27,7 +27,7 @@ const HomePage = ({ lang }) => {
                     </nav>
                     <main className='homePage-main'>
                         <div className='headers'>
-                            <ScrollAnimation animateIn='slideInLeft'><h1 className='headers-header-h1'> {content.name}</h1></ScrollAnimation>
+                            <ScrollAnimation animateOnce={true} animateIn='slideInLeft'><h1 className='headers-header-h1'> {content.name}</h1></ScrollAnimation>
                             <h2 className='headers-header-h2'><MachineWriting content={content.wonnaBe} /></h2>
                         </div>
                         <a href="http://github.com/KrzysztofZiemski" className='homePage-main-icon'><img src={githubIcon} alt='Github icon' /></a>

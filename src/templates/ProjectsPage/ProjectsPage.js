@@ -13,7 +13,7 @@ const ProjectsPage = ({ lang }) => {
             return (
                         <div className="projectsPage">
                                     <h1 className='projectsPage__header'>{content.title}</h1>
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <Project
                                                             img={shopProjectIMG}
                                                             name={content.projects.shopFront.name}
@@ -23,7 +23,7 @@ const ProjectsPage = ({ lang }) => {
                                                             linkGitHub={content.projects.shopFront.linkGitHub}
                                                 ></Project>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <Project
                                                             img={shopProjectIMG}
                                                             name={content.projects.shopBack.name}
@@ -33,7 +33,7 @@ const ProjectsPage = ({ lang }) => {
                                                             linkGitHub={content.projects.shopBack.linkGitHub}
                                                 ></Project>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <Project
                                                             img={bookProjectIMG}
                                                             name={content.projects.bookMates.name}
@@ -43,7 +43,7 @@ const ProjectsPage = ({ lang }) => {
                                                             linkGitHub={content.projects.bookMates.linkGitHub}
                                                 ></Project>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <Project
                                                             img={cardProjectIMG}
                                                             name={content.projects.card.name}

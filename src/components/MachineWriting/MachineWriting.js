@@ -4,6 +4,16 @@ import './MachineWriting.scss';
 const MachineWriting = ({ content }) => {
             let [sentence, setSentence] = useState(' ');
             let [end, setEnd] = useState(false);
+
+            useEffect(() => {
+                        start()
+            }, [])
+            const start = () => {
+                        setTimeout(() => {
+                                    write(content[0], 0, content[1])
+                        }, 1500)
+            }
+
             const write = (word, index = 0, nextWord) => {
                         setSentence(word.slice(0, index))
                         if (word.length > index) {
@@ -18,6 +28,7 @@ const MachineWriting = ({ content }) => {
                         }
                         setEnd(true);
             }
+
             const back = (word, index, nextWord) => {
                         setSentence(word.slice(0, index))
                         if (index > 0) {
@@ -32,11 +43,6 @@ const MachineWriting = ({ content }) => {
                         setEnd(true);
             }
 
-            useEffect(() => {
-                        setTimeout(() => {
-                                    write(content[0], 0, content[1])
-                        }, 1500)
-            }, [])
             return (
                         <span className={end ? 'machineWritting hide' : 'machineWritting'}>{sentence}</span>
             )

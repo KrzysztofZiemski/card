@@ -25,7 +25,7 @@ const ExperiencePage = ({ lang }) => {
                                                 {content.title}
                                     </h1>
 
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <article className='job'>
                                                             <img className='job__logo' src={ca_logo} alt="Credit Agricole logo" />
                                                             <div className='company'>
@@ -39,7 +39,7 @@ const ExperiencePage = ({ lang }) => {
                                                             </div>
                                                 </article>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <article className='job'>
                                                             <img className='job__logo' src={stefczyk_logo} alt="Stefczyk Finance logo" />
                                                             <div className='company'>
@@ -54,7 +54,7 @@ const ExperiencePage = ({ lang }) => {
                                                             </div>
                                                 </article>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <article className='job'>
                                                             <img className='job__logo' src={ing_logo} alt="ING Bank Śląski logo" />
                                                             <div className='company'>
@@ -69,7 +69,7 @@ const ExperiencePage = ({ lang }) => {
                                                             </div>
                                                 </article>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn='fadeIn'>
+                                    <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
                                                 <article className='job'>
                                                             <img className='job__logo' src={open_logo} alt="Open Finance logo" />
                                                             <div className='company'>

@@ -23,10 +23,10 @@ const Courses = ({ lang }) => {
                                     <ul className='coursesContainer'>
 
                                                 <li className='listByType'>
-                                                            <ScrollAnimation animateIn='slideInLeft'>
+                                                            <ScrollAnimation animateOnce={true} animateIn='slideInLeft'>
                                                                         <h2 className='listByType__header'>{content.stationaryNameList}</h2>
                                                             </ScrollAnimation>
-                                                            <ScrollAnimation animateIn='slideInLeft'>
+                                                            <ScrollAnimation animateOnce={true} animateIn='slideInLeft'>
                                                                         <ul className='listByType__list'>
                                                                                     {coursesList(content.stationaryCourses)}
                                                                         </ul>
@@ -35,10 +35,10 @@ const Courses = ({ lang }) => {
                                                 </li>
 
                                                 <li className='listByType'>
-                                                            <ScrollAnimation animateIn='slideInRight'>
+                                                            <ScrollAnimation animateOnce={true} animateIn='slideInRight'>
                                                                         <h2 className='listByType__header'>{content.webNameList}</h2>
                                                             </ScrollAnimation>
-                                                            <ScrollAnimation animateIn='slideInRight'>
+                                                            <ScrollAnimation animateOnce={true} animateIn='slideInRight'>
                                                                         <ul className='listByType__list'>
                                                                                     {coursesList(content.webCourses)}
                                                                         </ul>

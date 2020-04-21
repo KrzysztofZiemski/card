@@ -9,11 +9,11 @@ const AboutPage = ({ lang }) => {
             const content = aboutPage[lang];
 
             const descriptionParagraph = content.descriptionParagraph.map(paragraph => (
-                        <ScrollAnimation key={paragraph} animateIn='slideInLeft'><p className='description__paragraph'>{paragraph}</p></ScrollAnimation>
+                        <ScrollAnimation animateOnce={true} key={paragraph} animateIn='slideInLeft'><p className='description__paragraph'>{paragraph}</p></ScrollAnimation>
             ));
             const skills = content.skills.map((skill, index) => (
                         <div className='skillsContainer' key={skill + index}>
-                                    <ScrollAnimation animateIn='slideInRight'>
+                                    <ScrollAnimation animateOnce={true} animateIn='slideInRight'>
                                                 <StackElement className='skillsContainer__element'>
                                                             {skill}
                                                 </StackElement>
