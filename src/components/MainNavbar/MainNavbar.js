@@ -59,10 +59,10 @@ const MainNavbar = ({ pagesRef, lang }) => {
             <BurgerButton className={pageY < 500 ? 'burgerBtn' : 'burgerBtn bgc'} onClick={menuActive ? hideMenu : showMenu}><img src={burgerIcon} alt="menu-icon" /></BurgerButton>
             <ul className={menuActive ? 'slideNavbar' : 'slideNavbar hide'}>
                 <li className='slideNavbar__listElement'><Link to='/' onClick={() => { scrollToRef(homePageRef); hideMenu() }}>{content.homeLink}</Link></li>
-                <li className='slideNavbar__listElement'><Link to='/about' onClick={() => { scrollToRef(aboutPageRef); hideMenu() }}>{content.aboutLink}</Link></li>
-                <li className={pageY < 500 ? 'slideNavbar__listElement slideNavbar__listElement--alwaysShow' : 'slideNavbar__listElement slideNavbar__listElement--alwaysShow bgc'}><Link to='/projects' onClick={() => { scrollToRef(projectPageRef); hideMenu() }}>{content.projectsLink}</Link></li>
-                <li className='slideNavbar__listElement'><Link to='/courses' onClick={() => { scrollToRef(coursesPage); hideMenu() }}>{content.coursesLink}</Link></li>
-                <li className='slideNavbar__listElement'><Link to='/jobs' onClick={() => { scrollToRef(experiencePageRef); hideMenu() }}>{content.jobsLink}</Link></li>
+                <li className='slideNavbar__listElement'><Link to='/' onClick={() => { scrollToRef(aboutPageRef); hideMenu() }}>{content.aboutLink}</Link></li>
+                <li className={pageY < 500 ? 'slideNavbar__listElement slideNavbar__listElement--alwaysShow' : 'slideNavbar__listElement slideNavbar__listElement--alwaysShow bgc'}><Link to='/' onClick={() => { scrollToRef(projectPageRef); hideMenu() }}>{content.projectsLink}</Link></li>
+                <li className='slideNavbar__listElement'><Link to='/' onClick={() => { scrollToRef(coursesPage); hideMenu() }}>{content.coursesLink}</Link></li>
+                <li className='slideNavbar__listElement'><Link to='/' onClick={() => { scrollToRef(experiencePageRef); hideMenu() }}>{content.jobsLink}</Link></li>
             </ul>
         </nav >
     )

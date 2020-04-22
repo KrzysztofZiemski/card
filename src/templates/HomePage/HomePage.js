@@ -3,6 +3,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
 import githubIcon from '../../assets/github-icon.svg';
 import profile from '../../assets/profile.png';
+import profileMedium from '../../assets/profile_medium.png';
+import profileMSmall from '../../assets/profile_small.png';
 import Button from '../../components/Button/Button';
 import MachineWriting from '../../components/MachineWriting/MachineWriting';
 import CV from '../../assets/CV.pdf';
@@ -14,6 +16,14 @@ const HomePage = ({ lang }) => {
     const downloadCV = () => {
         window.open(CV);
     }
+
+    const selectImage = () => {
+        const width = window.innerWidth;
+        if (width > 1023) return profile
+        if (width > 600) return profileMedium
+        return profileMSmall
+    }
+
     return (
         <ScrollAnimation animateOnce={true} animateIn='fadeIn'>
             <div className='homePage'>
@@ -31,7 +41,7 @@ const HomePage = ({ lang }) => {
                             <h2 className='headers-header-h2'><MachineWriting content={content.wonnaBe} /></h2>
                         </div>
                         <a href="http://github.com/KrzysztofZiemski" className='homePage-main-icon'><img src={githubIcon} alt='Github icon' /></a>
-                        <div className='homePage-main__photoContainer'><img src={profile} alt="photos Krzysztof Ziemski" className='homePage-main-profileImage' /></div>
+                        <div className='homePage-main__photoContainer'><img src={selectImage()} alt="photos Krzysztof Ziemski" className='homePage-main-profileImage' /></div>
                     </main>
                 </div>
                 <div className='homePage-aside'></div>

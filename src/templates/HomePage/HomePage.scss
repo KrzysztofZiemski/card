@@ -130,21 +130,22 @@
                 position: relative;
                 flex-grow: 1;
                 overflow: hidden;
-                margin: 13px;
-
-                @include rwd(tablet) {
-                    margin: 20px;
-                }
+                margin: 0;
+                overflow: hidden;
 
                 img {
                     position: absolute;
                     bottom: 0;
-                    right: 0;
+                    right: 0px;
                     max-height: 100%;
                     max-width: calc(100% - var(--asideNavLastElement));
+                    animation: profileIMG 10s 1;
+
+                    @include rwd(small) {
+                        max-width: 100%;
+                    }
 
                     @include rwd(medium) {
-                        max-width: 100%;
                         max-height: 90%;
                     }
                 }
