@@ -198,7 +198,7 @@
         },
         "bookMates": {
           "name": "BookMates",
-          "description": "Projekt realizowany grupowo. Członkowie projektu byli wybierani losowo. Temat projektu mieliśmy wybrać sami. Projekt jest zbudowany przy użyciu React i Node.js. Miał nam pokazać jakie problemy pojawią się w komunikacji grupy. Do komunikacji wykorzystaliśmy aplikację Slack oraz stronę trello.com. Jako, że z założenia każdy członek grupy miał mieć styczność z programowaniem na frontendzie i backendzie, rozdzieliliśmy zadania według widoków dla użytkownika. Jako lider grupy stworzyłem pierwszy zarys projektu oraz podstawową strukturę plików. Dodałem również logowanie oraz rejestrację użytkowników. W projekcie użyliśmy bazy danych postGresSQL. Następnie stworzyłem podstronę użytkownika z widokiem, oraz poprawiłem stronę biblioteczki. Stworzyłem równiż obługę dodawania użytkowników do znajomych oraz stworzyłem algorytm sugestii znajomych",
+          "description": "STRONA TYMCZASOWO WYŁĄCZONA Z LIVE. Projekt realizowany grupowo. Członkowie projektu byli wybierani losowo. Temat projektu mieliśmy wybrać sami. Projekt jest zbudowany przy użyciu React i Node.js. Miał nam pokazać jakie problemy pojawią się w komunikacji grupy. Do komunikacji wykorzystaliśmy aplikację Slack oraz stronę trello.com. Jako, że z założenia każdy członek grupy miał mieć styczność z programowaniem na frontendzie i backendzie, rozdzieliliśmy zadania według widoków dla użytkownika. Jako lider grupy stworzyłem pierwszy zarys projektu oraz podstawową strukturę plików. Dodałem również logowanie oraz rejestrację użytkowników. W projekcie użyliśmy bazy danych postGresSQL. Następnie stworzyłem podstronę użytkownika z widokiem, oraz poprawiłem stronę biblioteczki. Stworzyłem równiż obługę dodawania użytkowników do znajomych oraz stworzyłem algorytm sugestii znajomych",
           "linkGitHub": "https://github.com/KrzysztofZiemski/bookmates",
           "linkLive": "https://bookmates.krzysztofziemski.com/"
         },
@@ -207,6 +207,18 @@
           "description": "Strona przedstawiająca moją osobę i postępy w nauce. Gromadzi w jednym miejscu wszystkie niezbędne informację. Miała z założenia być prostą stroną internetową. Użyte technologie to html, sass, react",
           "linkGitHub": "https://github.com/KrzysztofZiemski/card",
           "linkLive": "https://krzysztofziemski.com"
+        },
+        "zliczka": {
+          "name": "Zliczka",
+          "description": "Strona stworzona dla mojego szefa. Dzięki temu możliwy był monitoring czasu pracy zespołu, nie angażując dużo czasu na pracę w excelu.Znacznie przyspiesza proces weryfikacji czasu pracy zespołu. Umożliwia dodawanie i usuwanie zarówno pracowników zespołu, jak i zadań zespołu. Możliwe zalogowanie po danych login:uzytkownik, hasło: użytkownik od strony pracownika oraz login:admin hasło:admin od strony managera.  Użyte technologie to html, tailwind,javascript, webpack",
+          "linkGitHub": "https://github.com/KrzysztofZiemski/zliczkaJS",
+          "linkLive": "https://zliczka.krzysztofziemski.com"
+        },
+        "hextl": {
+          "name": "HEXTL ERP",
+          "description": "Strona stworzona w zespole dwuosobowym. Jest to system ERP do zarządzania produkcją. Stworzone jako demo dla realnych potrzeb jednego z przedsiębiorstw. Mozliwość śledzenie afektywności pracy pracownika, linii produkcyjnej oraz maszyny produkcyjnej. Możliwość tworzenia grafiku dla pracowników z przydzielaniem do odpowiednich maszyn. Statystyki efektywności pracownika na danym miejscu pracy, rankingi pracowników. Praco podzielon pomiędzy backend a frontend. Odpowiadałem za stronę frontendową. Użyte technologi Frontend: react, javascript,html,material-ui. Uzyte technologie Backend: rest-api, Java, Spring-Boot,Security, My-sql, Swagger",
+          "linkGitHub": "https://github.com/KrzysztofZiemski/work-plan",
+          "linkLive": "https://hextl.magfi.pl/"
         }
       }
     },
@@ -249,6 +261,18 @@
           "description": "A page depicting me and my academic progress. It gathers all necessary information in one place. It was supposed to be a simple website. The technologies used: html, sass, react.",
           "linkGitHub": "https://github.com/KrzysztofZiemski/card",
           "linkLive": "https://krzysztofziemski.com"
+        },
+        "zliczka": {
+          "name": "Counter",
+          "description": "Website made for my boss. Thanks to this, it was possible to monitor the team's working time, without spending a lot of time working in Excel. It significantly speeds up the process of verifying the team's working time. Allows you to add and remove both team employees and team tasks. Possible logging from the employee's side by login:uzytkownik, password: użytkownik and from the boss's side login:admin password:admin. The technologies used: html, tailwind,javascript, webpack",
+          "linkGitHub": "https://github.com/KrzysztofZiemski/zliczkaJS",
+          "linkLive": "https://zliczka.krzysztofziemski.com"
+        },
+        "hextl": {
+          "name": "HEXTL ERP",
+          "description": "Website created in a team of two. It is an ERP system for production management. Created as a demo for the real needs of one of the companies. the Possibility  to checking the affectivity of the employee's work, the production line and the production machine. Possibility to create a schedule for employees with assigning to appropriate machines.Employee performance statistics at the workplace, employee rankings. Work divided in between backend and frontend. I was responsible for the frontend site. The technologies used in Frontend: react, javascript,html,material-ui. The technologies used in Backend: rest-api, Java, Spring-Boot,Security, My-sql, Swagger",
+          "linkGitHub": "https://github.com/KrzysztofZiemski/work-plan",
+          "linkLive": "https://hextl.magfi.pl/"
         }
       }
     }
