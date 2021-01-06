@@ -181,7 +181,10 @@
         "fetch": "fetch",
         "pouchDB": "pouchDB",
         "jwtToken": "JWT tokens",
-        "postgresql": "PostgreSQL"
+        "postgresql": "PostgreSQL",
+        "tailwind": "Tailwind",
+        "webpack": "Webpack",
+        "ts": "typescript"
       },
       "projects": {
         "shopFront": {
@@ -210,13 +213,13 @@
         },
         "zliczka": {
           "name": "Zliczka",
-          "description": "Strona stworzona dla mojego szefa. Dzięki temu możliwy był monitoring czasu pracy zespołu, nie angażując dużo czasu na pracę w excelu.Znacznie przyspiesza proces weryfikacji czasu pracy zespołu. Umożliwia dodawanie i usuwanie zarówno pracowników zespołu, jak i zadań zespołu. Możliwe zalogowanie po danych login:uzytkownik, hasło: użytkownik od strony pracownika oraz login:admin hasło:admin od strony managera.  Użyte technologie to html, tailwind,javascript, webpack",
+          "description": "Strona stworzona dla mojego szefa. Dzięki niej możliwy był monitoring czasu pracy zespołu, nie angażując dużo czasu na pracę w excelu.Znacznie przyspiesza proces weryfikacji czasu pracy zespołu. Umożliwia dodawanie i usuwanie zarówno pracowników zespołu, jak i zadań zespołu. Możliwe zalogowanie po danych login:uzytkownik, hasło: użytkownik od strony pracownika oraz login:admin hasło:admin od strony managera.  Użyte technologie to html, tailwind,typescript,typescript, webpack, node.js + express",
           "linkGitHub": "https://github.com/KrzysztofZiemski/zliczkaJS",
           "linkLive": "https://zliczka.krzysztofziemski.com"
         },
         "hextl": {
           "name": "HEXTL ERP",
-          "description": "Strona stworzona w zespole dwuosobowym. Jest to system ERP do zarządzania produkcją. Stworzone jako demo dla realnych potrzeb jednego z przedsiębiorstw. Mozliwość śledzenie afektywności pracy pracownika, linii produkcyjnej oraz maszyny produkcyjnej. Możliwość tworzenia grafiku dla pracowników z przydzielaniem do odpowiednich maszyn. Statystyki efektywności pracownika na danym miejscu pracy, rankingi pracowników. Praco podzielon pomiędzy backend a frontend. Odpowiadałem za stronę frontendową. Użyte technologi Frontend: react, javascript,html,material-ui. Uzyte technologie Backend: rest-api, Java, Spring-Boot,Security, My-sql, Swagger",
+          "description": "Strona stworzona w zespole dwuosobowym. Jest to system ERP do zarządzania produkcją. Stworzone jako demo dla realnych potrzeb jednego z przedsiębiorstw. Mozliwość śledzenie afektywności pracy pracownika, linii produkcyjnej oraz maszyny produkcyjnej. Możliwość tworzenia grafiku dla pracowników z przydzielaniem do odpowiednich maszyn. Statystyki efektywności pracownika na danym miejscu pracy, rankingi pracowników. Praca podzielon pomiędzy backend a frontend. Odpowiadałem za stronę frontendową. Użyte technologi Frontend: react, javascript,html,material-ui. Uzyte technologie Backend: rest-api, Java, Spring-Boot,Security, My-sql, Swagger",
           "linkGitHub": "https://github.com/KrzysztofZiemski/work-plan",
           "linkLive": "https://hextl.magfi.pl/"
         }
@@ -225,17 +228,18 @@
     "en": {
       "title": "Projects",
       "stacks": {
-        "html": "html",
-        "css": "css",
-        "sass": "sass",
-        "react": "react",
-        "js": "javascript",
+        "html": "HTML",
+        "css": "CSS",
+        "sass": "Sass",
+        "react": "React",
+        "js": "Javascript",
         "nodeExpress": "node + express",
-        "rwd": "rwd",
-        "fetch": "fetch",
-        "pouchDB": "pouchDB",
+        "rwd": "RWD",
+        "fetch": "Fetch",
+        "pouchDB": "PouchDB",
         "jwtToken": "JWT tokens",
-        "postgresql": "PostgreSQL"
+        "postgresql": "PostgreSQL",
+        "material": "Material-ui"
       },
       "projects": {
         "shopFront": {
@@ -264,7 +268,7 @@
         },
         "zliczka": {
           "name": "Counter",
-          "description": "Website made for my boss. Thanks to this, it was possible to monitor the team's working time, without spending a lot of time working in Excel. It significantly speeds up the process of verifying the team's working time. Allows you to add and remove both team employees and team tasks. Possible logging from the employee's side by login:uzytkownik, password: użytkownik and from the boss's side login:admin password:admin. The technologies used: html, tailwind,javascript, webpack",
+          "description": "Website made for my boss. Thanks to this, it was possible to monitor the team's working time, without spending a lot of time working in Excel. It significantly speeds up the process of verifying the team's working time. Allows you to add and remove both team employees and team tasks. Possible logging from the employee's side by login:uzytkownik, password: użytkownik and from the boss's side login:admin password:admin. The technologies used: html, tailwind,javascript, typescript, webpack, node.js + express",
           "linkGitHub": "https://github.com/KrzysztofZiemski/zliczkaJS",
           "linkLive": "https://zliczka.krzysztofziemski.com"
         },
