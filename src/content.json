@@ -270,7 +270,7 @@
           "name": "Counter",
           "description": "Website made for my boss. Thanks to this, it was possible to monitor the team's working time, without spending a lot of time working in Excel. It significantly speeds up the process of verifying the team's working time. Allows you to add and remove both team employees and team tasks. Possible logging from the employee's side by login:uzytkownik, password: użytkownik and from the boss's side login:admin password:admin. The technologies used: html, tailwind,javascript, typescript, webpack, node.js + express",
           "linkGitHub": "https://github.com/KrzysztofZiemski/zliczkaJS",
-          "linkLive": "https://zliczka.krzysztofziemski.com"
+          "linkLive": "https://zliczka.herokuapp.com/"
         },
         "hextl": {
           "name": "HEXTL ERP",
