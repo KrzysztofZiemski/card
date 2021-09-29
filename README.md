@@ -6,7 +6,7 @@ A page depicting me and my academic progress. It gathers all necessary informati
 
 html, sass, react
 
-##start script
+## start script
 
 npm run build for build static files
 
