@@ -12,4 +12,4 @@ npm run build for build static files
 
 ## live
 
-https://krzysztofziemski.com/
+https://wizytwka.netlify.app/
